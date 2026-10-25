@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight, Utensils, Clock, Sparkles } from 'lucide-react';
+import { ArrowRight, Utensils, Clock, Sparkles, MapPin, Star } from 'lucide-react';
 import gsap from 'gsap';
 import { RESTAURANT_CONFIG } from '../restaurantConfig';
 
@@ -13,7 +13,6 @@ export const Hero = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Staggered entrance animation
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
       tl.from(badgeRef.current, {
@@ -64,11 +63,11 @@ export const Hero = () => {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-[92vh] flex items-center pt-28 pb-16 overflow-hidden bg-[#0D0F12]"
+      className="relative min-h-[92vh] flex items-center pt-28 pb-16 overflow-hidden bg-[#120D0A]"
     >
-      {/* Subtle background ambient glow */}
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#E58A38]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-[#99581A]/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Warm Indian Terracotta & Amber ambient glow */}
+      <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#E07A2B]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-[#B44C28]/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -76,59 +75,63 @@ export const Hero = () => {
           {/* Left Column: Asymmetrical Editorial Narrative */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             
-            {/* Top Cuisine & Status Pill */}
-            <div ref={badgeRef} className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#171A21] border border-[#2C3240] w-fit mb-6">
-              <Sparkles className="w-3.5 h-3.5 text-[#E58A38]" />
-              <span className="text-xs uppercase font-medium tracking-widest text-[#D8D2C4]">
-                {RESTAURANT_CONFIG.brand.cuisine}
+            {/* Top Cuisine & Veg-Only Status Pill */}
+            <div ref={badgeRef} className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C1410] border border-[#3D2B20] w-fit mb-6">
+              <span className="flex items-center gap-1.5 text-xs uppercase font-medium tracking-widest text-[#DFD5C2]">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block border border-emerald-300" />
+                Veg-Only • {RESTAURANT_CONFIG.brand.rating}
               </span>
+              <span className="text-[#3D2B20]">|</span>
+              <span className="text-xs text-[#E8B358] font-semibold">{RESTAURANT_CONFIG.brand.priceRange}</span>
             </div>
 
             {/* Main Headline */}
             <h1
               ref={headlineRef}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium tracking-tight text-[#F7F4EE] leading-[1.1] mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium tracking-tight text-[#FBF7EE] leading-[1.1] mb-6"
             >
-              Every Plate Tells <br />
-              <span className="italic font-light text-[#F3B367]">An Unhurried Story</span> Of Fire & Flavor.
+              Bharat Ki Rich <br />
+              <span className="italic font-light text-[#E8B358]">Mitti & Parampara</span> Ka Asli Swaad.
             </h1>
 
             {/* Supporting Description */}
             <p
               ref={descRef}
-              className="text-base sm:text-lg text-[#D8D2C4]/80 max-w-xl leading-relaxed mb-8"
+              className="text-base sm:text-lg text-[#DFD5C2]/85 max-w-xl leading-relaxed mb-8"
             >
-              Immerse yourself in artisanal seasonal gastronomy. From our 72-hour stone-baked pizzas to 35-day dry-aged prime steaks seared over white oak coals.
+              Experience the grand culinary legacy of India at <strong>Maatribhoomi (मातृभूमि)</strong>, Noida. From our 14-dish Royal Maharaja Thali to slow-simmered 24-hour Dal, clay tandoor specialties, and hot desi ghee jalebis.
             </p>
 
             {/* Call To Actions */}
             <div ref={ctaRef} className="flex flex-wrap items-center gap-4 mb-10">
               <button
                 onClick={() => scrollTo('menu')}
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#E58A38] hover:bg-[#F3B367] text-[#0D0F12] font-semibold text-sm uppercase tracking-wider rounded-sm transition-all duration-300 shadow-md hover:shadow-[#E58A38]/30 cursor-pointer"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#E07A2B] hover:bg-[#E8B358] text-[#120D0A] font-semibold text-sm uppercase tracking-wider rounded-sm transition-all duration-300 shadow-md hover:shadow-[#E07A2B]/30 cursor-pointer"
               >
                 <Utensils className="w-4 h-4" />
-                Explore Menu
+                Explore Pure-Veg Menu
               </button>
 
               <button
                 onClick={() => scrollTo('reservations')}
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-transparent hover:bg-[#171A21] text-[#F7F4EE] border border-[#2C3240] hover:border-[#E58A38] font-semibold text-sm uppercase tracking-wider rounded-sm transition-all duration-300 cursor-pointer"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-transparent hover:bg-[#1C1410] text-[#FBF7EE] border border-[#3D2B20] hover:border-[#E07A2B] font-semibold text-sm uppercase tracking-wider rounded-sm transition-all duration-300 cursor-pointer"
               >
                 Reserve Table
-                <ArrowRight className="w-4 h-4 text-[#E58A38]" />
+                <ArrowRight className="w-4 h-4 text-[#E07A2B]" />
               </button>
             </div>
 
-            {/* Live Service Micro-Info */}
-            <div className="flex items-center gap-6 pt-6 border-t border-[#2C3240]/60 text-xs text-[#D8D2C4]/70">
+            {/* Live Service Micro-Info (Exact Google Maps match) */}
+            <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-[#3D2B20]/60 text-xs text-[#DFD5C2]/70">
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#E58A38]" />
-                <span>Today: 5:00 PM – 11:00 PM</span>
+                <Clock className="w-4 h-4 text-[#E07A2B]" />
+                <span className="text-emerald-400 font-semibold">Open Now</span>
+                <span>• Closes 11:30 PM</span>
               </div>
-              <div className="h-3 w-[1px] bg-[#2C3240]" />
-              <div>
-                <span>San Francisco, California</span>
+              <div className="h-3 w-[1px] bg-[#3D2B20] hidden sm:block" />
+              <div className="flex items-center gap-1.5">
+                <MapPin className="w-4 h-4 text-[#E8B358]" />
+                <span>Sector 38, Near Botanical Garden Metro, Noida</span>
               </div>
             </div>
           </div>
@@ -137,38 +140,38 @@ export const Hero = () => {
           <div className="lg:col-span-5 relative" ref={imageContainerRef}>
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
-              {/* Outer Decorative Frame */}
-              <div className="relative rounded-2xl overflow-hidden border border-[#2C3240] shadow-2xl bg-[#171A21]">
+              {/* Outer Decorative Frame with Terracotta Glow */}
+              <div className="relative rounded-2xl overflow-hidden border border-[#3D2B20] shadow-2xl bg-[#1C1410]">
                 <img
-                  src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
-                  alt="Artisanal Ribeye Steak seared over white oak coals"
+                  src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=1200&q=80"
+                  alt="Maharaja Heritage Royal Thali at Maatribhoomi"
                   className="w-full h-[460px] object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 
                 {/* Gradient Overlay for Mood & Contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0F12] via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#120D0A] via-transparent to-transparent opacity-85" />
 
                 {/* Floating Highlight Card */}
-                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-[#171A21]/90 backdrop-blur-md border border-[#2C3240] flex items-center justify-between">
+                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-[#1C1410]/95 backdrop-blur-md border border-[#3D2B20] flex items-center justify-between">
                   <div>
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#E58A38]">
-                      Chef's Seasonal Feature
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#E07A2B]">
+                      Chef Hari Nayak Curation
                     </span>
-                    <h3 className="text-sm font-serif font-bold text-[#F7F4EE]">
-                      Truffle Glazed Prime Ribeye
+                    <h3 className="text-sm font-serif font-bold text-[#FBF7EE]">
+                      Maharaja Heritage Royal Thali
                     </h3>
                   </div>
                   <div className="text-right">
-                    <span className="text-lg font-serif font-bold text-[#F3B367]">
-                      $48
+                    <span className="text-lg font-serif font-bold text-[#E8B358]">
+                      ₹850
                     </span>
                   </div>
                 </div>
               </div>
 
               {/* Decorative Corner Accent */}
-              <div className="absolute -top-3 -right-3 w-20 h-20 border-t-2 border-r-2 border-[#E58A38]/40 pointer-events-none rounded-tr-lg" />
-              <div className="absolute -bottom-3 -left-3 w-20 h-20 border-b-2 border-l-2 border-[#E58A38]/40 pointer-events-none rounded-bl-lg" />
+              <div className="absolute -top-3 -right-3 w-20 h-20 border-t-2 border-r-2 border-[#E07A2B]/40 pointer-events-none rounded-tr-lg" />
+              <div className="absolute -bottom-3 -left-3 w-20 h-20 border-b-2 border-l-2 border-[#E07A2B]/40 pointer-events-none rounded-bl-lg" />
             </div>
           </div>
 

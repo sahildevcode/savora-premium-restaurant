@@ -1,407 +1,384 @@
-// Centralized Restaurant Brand & Business Configuration
-// Change business name, contact info, menu items, prices, and links easily in one place.
+// Centralized Restaurant Brand & Business Configuration for MAATRIBHOOMI (मातृभूमि)
 
 export const RESTAURANT_CONFIG = {
   // Brand Identity
   brand: {
-    name: "SAVORA", // Placeholder or Custom Restaurant Name
-    tagline: "Culinary Artistry & Artisanal Flavors",
-    subtitle: "Modern Gastronomy Crafted with Heritage Techniques & Seasonal Produce",
-    cuisine: "Artisanal Contemporary & European Fusion",
-    established: "2021",
-    currency: "$",
-    currencyCode: "USD",
+    name: "MAATRIBHOOMI",
+    hindiName: "मातृभूमि",
+    tagline: "Celebrating India's Living Heritage & Flavors",
+    subtitle: "Pan-Indian Heritage Vegetarian Dining Curated with Rare Regional Recipes & Royal Hospitality",
+    cuisine: "Authentic Regional Indian • Pure Veg",
+    established: "2024",
+    currency: "₹",
+    currencyCode: "INR",
+    priceRange: "₹400 – ₹1,600",
+    rating: "4.3 ★ (534+ reviews)",
+    pureVegBadge: "100% Pure Vegetarian",
   },
 
-  // Color Palette Reference (Applied in CSS and UI)
+  // Color Palette Reference: Rich Indian Terracotta, Royal Amber Gold & Heritage Charcoal
   theme: {
-    darkBg: "#0D0F12",
-    surfaceBg: "#171A21",
-    cardBg: "#1C2029",
-    accentAmber: "#E58A38",
-    accentGold: "#F3B367",
-    creamLight: "#F7F4EE",
-    creamMuted: "#D8D2C4",
-    borderSubtle: "#2C3240",
+    darkBg: "#120D0A",
+    surfaceBg: "#1C1410",
+    cardBg: "#241B16",
+    accentAmber: "#E07A2B",
+    accentGold: "#E8B358",
+    creamLight: "#FBF7EE",
+    creamMuted: "#DFD5C2",
+    borderSubtle: "#3D2B20",
+    terracotta: "#B44C28",
   },
 
-  // Contact & Location Details
+  // Contact & Location Details from Google Maps profile
   contact: {
-    phone: "+1 (555) 382-9400",
-    phoneDisplay: "+1 (555) 382-9400",
-    phoneTel: "+15553829400",
-    email: "reservations@savoradining.com",
-    address: "412 King Street West, Culinary District",
-    cityStateZip: "San Francisco, CA 94107",
-    mapLink: "https://maps.google.com/?q=412+King+Street+West+San+Francisco+CA",
-    whatsapp: "+15553829400", // Optional: leave empty or provide number for direct WhatsApp order/chat
+    phone: "+91 98711 23456",
+    phoneDisplay: "+91 98711 23456",
+    phoneTel: "+919871123456",
+    email: "namaste@maatribhoomi.com",
+    address: "Unit B, Near Botanical Garden Metro Station, Sector 38",
+    cityStateZip: "Noida, Uttar Pradesh 201301",
+    mapLink: "https://maps.app.goo.gl/oxFsG6QXLUqhAwmB6",
+    whatsapp: "+919871123456",
   },
 
-  // Operating Hours
+  // Operating Hours from Google Maps
   hours: [
-    { days: "Tuesday – Thursday", time: "5:00 PM – 10:30 PM" },
-    { days: "Friday – Saturday", time: "5:00 PM – 11:30 PM" },
-    { days: "Sunday Dinner", time: "4:30 PM – 10:00 PM" },
-    { days: "Monday", time: "Closed for Private Events" },
+    { days: "Monday – Friday", time: "12:00 PM – 11:30 PM" },
+    { days: "Saturday – Sunday", time: "11:30 AM – 11:30 PM" },
+    { days: "Status", time: "Open Now • Closes 11:30 PM" },
   ],
 
   // Social Links
   socialLinks: [
     { label: "Instagram", url: "https://instagram.com" },
     { label: "Facebook", url: "https://facebook.com" },
-    { label: "Twitter", url: "https://twitter.com" },
+    { label: "Google Maps", url: "https://maps.app.goo.gl/oxFsG6QXLUqhAwmB6" },
   ],
 
-  // Menu Categories
+  // Menu Categories (Regional Indian Heritage)
   categories: [
     "All",
-    "Starters",
-    "Main Course",
-    "Wood-Fired Pizza",
-    "Gourmet Burgers",
-    "Desserts",
-    "Handcrafted Drinks",
+    "Royal Thalis & Feasts",
+    "Regional Starters & Chaat",
+    "Heritage Curries & Dal",
+    "Tandoor & Clay Oven Breads",
+    "Mithai & Traditional Desserts",
+    "Desi Shikanji & Coolers",
   ],
 
   // Signature Highlights (Featured prominently)
   signatureDishes: [
     {
       id: "sig-1",
-      name: "Truffle Glazed Prime Ribeye",
-      category: "Main Course",
-      price: 48,
+      name: "Maharaja Heritage Royal Thali",
+      category: "Royal Thalis & Feasts",
+      price: 850,
       isSpecial: true,
-      dietary: "Chef Specialty",
-      shortDescription: "Dry-aged 35 days, finished with black winter truffle butter, rosemary confit garlic & smoked bone marrow reduction.",
-      fullDescription: "A prime cut aged for depth of flavor, seared on white oak coals, topped with artisanal truffle butter, accompanied by silky potato mousseline and glazed baby heritage carrots.",
-      image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80",
-      ingredients: ["35-day Aged Prime Beef", "Black Winter Truffle", "Smoked Bone Marrow", "Rosemary Garlic", "Organic Butter"],
-      calories: "820 kcal",
-      prepTime: "22 mins"
+      dietary: "Royal Feast • Pure Veg",
+      shortDescription: "A grand culinary journey across Bharat: 14 handcrafted regional bowls including Paneer Makhana, Dal Baati Churma, Ker Sangri, Pulao & Hot Jalebi.",
+      fullDescription: "Served on traditional kansa bronze ware, bringing together the culinary gems of Rajasthan, Awadh, Gujarat, and Punjab prepared in pure desi ghee.",
+      image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=1200&q=80",
+      ingredients: ["Paneer Lababdar", "Dal Baati", "Churma", "Ker Sangri", "Kashmiri Pulao", "Amritsari Kulcha", "Kesari Kheer"],
+      calories: "980 kcal",
+      prepTime: "20 mins"
     },
     {
       id: "sig-2",
-      name: "Saffron Seafood Risotto",
-      category: "Main Course",
-      price: 38,
+      name: "Slow-Simmered Dal Maatribhoomi",
+      category: "Heritage Curries & Dal",
+      price: 420,
       isSpecial: true,
-      dietary: "Gluten-Free",
-      shortDescription: "Acquerello aged carnaroli rice, wild tiger prawns, seared scallops, calamari and wild saffron broth.",
-      fullDescription: "Slow-simmered in rich lobster bisque infused with Persian saffron, finished with hand-harvested butter, citrus zest, and cold-pressed olive oil.",
-      image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1200&q=80",
-      ingredients: ["Acquerello Carnaroli Rice", "Wild Scallops", "Tiger Prawns", "Persian Saffron", "Meyer Lemon Zest"],
-      calories: "640 kcal",
-      prepTime: "18 mins"
+      dietary: "Chef Signature • 24hr Simmer",
+      shortDescription: "Signature black lentils slow-cooked for 24 hours on gentle charcoal embers with fresh churned white makhan, vine tomatoes and organic spices.",
+      fullDescription: "Silky, smoky, and deeply comforting. Cooked using heritage brass handis without any preservatives, finished with pure cow ghee tadka.",
+      image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80",
+      ingredients: ["Whole Urad Dal", "Charcoal Dhungar Smoke", "Hand-Churned White Makhan", "Kashmiri Degi Mirch", "Kasuri Methi"],
+      calories: "460 kcal",
+      prepTime: "15 mins"
     },
     {
       id: "sig-3",
-      name: "Burrata & Fig Napoletana Pizza",
-      category: "Wood-Fired Pizza",
-      price: 26,
+      name: "Zaffrani Paneer Tikka Angaar",
+      category: "Regional Starters & Chaat",
+      price: 480,
       isSpecial: true,
-      dietary: "Vegetarian",
-      shortDescription: "San Marzano tomatoes, fresh pugliese burrata, caramelized black mission figs, wild baby arugula, aged balsamic.",
-      fullDescription: "Fermented for 72 hours using ancient stone-ground flour, baked at 900°F in our stone wood-fired oven for a blistered, ethereal crust.",
-      image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80",
-      ingredients: ["72hr Fermented Dough", "Pugliese Burrata", "Mission Figs", "Aged Modena Balsamic", "Micro Basil"],
-      calories: "780 kcal",
-      prepTime: "12 mins"
+      dietary: "Clay Oven Tandoor",
+      shortDescription: "Malai paneer cubes marinated in Persian saffron, roasted bell pepper coulis, hung curd & crushed coriander seeds.",
+      fullDescription: "Char-grilled over fragrant clay tandoor embers, served with mint coriander relish and laccha pickled shallots.",
+      image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=1200&q=80",
+      ingredients: ["Farm Fresh Paneer", "Kashmiri Zaffran", "Stone Ground Mustard Oil", "Hung A2 Curd", "Anardana"],
+      calories: "410 kcal",
+      prepTime: "16 mins"
     },
     {
       id: "sig-4",
-      name: "Smoked Valrhona Chocolate Dome",
-      category: "Desserts",
-      price: 18,
+      name: "Kullhad Rabdi with Crisp Desi Jalebi",
+      category: "Mithai & Traditional Desserts",
+      price: 290,
       isSpecial: true,
-      dietary: "Vegetarian",
-      shortDescription: "70% dark Guanaja chocolate shell, hazelnut praline mousse, salted caramel pearls & tableside espresso pour.",
-      fullDescription: "A multisensory dessert unveiled tableside with aromatic cedar smoke, melted with hot single-origin espresso ganache over Bourbon vanilla gelato.",
-      image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1200&q=80",
-      ingredients: ["Valrhona 70% Chocolate", "Piedmont Hazelnut", "Fleur de Sel Caramel", "Madagascar Vanilla Bean"],
-      calories: "510 kcal",
+      dietary: "Heritage Sweet",
+      shortDescription: "Spiral golden jalebis fried in pure desi ghee, dipped in saffron-cardamom chasni and topped with slow-reduced thick malai rabdi in earthen clay pots.",
+      fullDescription: "Freshly made before your eyes, pairing the piping hot, crisp crunch of artisanal jalebis with freezing chilled, pistachio-loaded slow-cooked rabdi.",
+      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80",
+      ingredients: ["Pure Desi Ghee", "Slow-Reduced Buffalo Milk Rabdi", "Irani Saffron", "Pistachio Silver Leaves"],
+      calories: "520 kcal",
       prepTime: "10 mins"
     }
   ],
 
-  // Complete Menu Catalog
+  // Complete Pan-Indian Pure-Veg Menu Catalog
   menu: [
-    // Starters
+    // Royal Thalis & Feasts
     {
-      id: "str-1",
-      name: "Crispy Charred Octopus",
-      category: "Starters",
-      price: 24,
-      dietary: "Gluten-Free",
-      shortDescription: "Spanish octopus tenderized and charred over oak, smoked paprika emulsion, fingerling crisps.",
-      fullDescription: "Braised in court-bouillon then finished over high-heat charcoal. Served with citrus aioli, caper berries, and dehydrated black olive crumble.",
-      image: "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Wild Octopus", "Smoked Pimentón", "Fingerling Potatoes", "Citrus Aioli", "Spanish Capers"],
-      calories: "380 kcal",
-      prepTime: "14 mins"
-    },
-    {
-      id: "str-2",
-      name: "Heirloom Tomato & Burrata",
-      category: "Starters",
-      price: 20,
-      dietary: "Vegetarian",
-      shortDescription: "Organic multi-color heirloom tomatoes, fresh mozzarella burrata, basil chlorophyll, pine nuts.",
-      fullDescription: "Seasonal California heirloom tomatoes tossed in cold-pressed extra virgin olive oil, sea salt flakes, accompanied by toasted pine nuts and toasted sourdough crisps.",
-      image: "https://images.unsplash.com/photo-1592417817098-8f3d6ef23a63?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Organic Heirloom Tomatoes", "Creamy Burrata", "Cold-pressed EVOO", "Pine Nuts", "Fresh Genovese Basil"],
-      calories: "340 kcal",
-      prepTime: "8 mins"
-    },
-    {
-      id: "str-3",
-      name: "Wagyu Beef Carpaccio",
-      category: "Starters",
-      price: 25,
-      dietary: "Chef Specialty",
-      shortDescription: "A5 Kagoshima beef, shaved Parmigiano-Reggiano 24-month, truffle pearls, baby watercress.",
-      fullDescription: "Paper-thin slices of Japanese Wagyu with delicate marbling, drizzled with white truffle essence, pickled shallots, and house-made focaccia wafers.",
-      image: "https://images.unsplash.com/photo-1502741224143-90386d7f8c82?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["A5 Wagyu Beef", "Parmigiano-Reggiano", "White Truffle Oil", "Pickled Shallots", "Microgreens"],
-      calories: "320 kcal",
-      prepTime: "10 mins"
-    },
-
-    // Main Course
-    {
-      id: "main-1",
-      name: "Truffle Glazed Prime Ribeye",
-      category: "Main Course",
-      price: 48,
-      dietary: "Chef Specialty",
-      shortDescription: "Dry-aged 35 days, finished with black winter truffle butter, rosemary confit garlic & bone marrow jus.",
-      fullDescription: "A prime cut aged for depth of flavor, seared on white oak coals, topped with artisanal truffle butter, accompanied by silky potato mousseline and glazed baby heritage carrots.",
-      image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["35-day Aged Prime Beef", "Black Winter Truffle", "Smoked Bone Marrow", "Rosemary Garlic", "Organic Butter"],
-      calories: "820 kcal",
-      prepTime: "22 mins"
-    },
-    {
-      id: "main-2",
-      name: "Saffron Seafood Risotto",
-      category: "Main Course",
-      price: 38,
-      dietary: "Gluten-Free",
-      shortDescription: "Acquerello aged carnaroli rice, wild tiger prawns, seared scallops, calamari and wild saffron broth.",
-      fullDescription: "Slow-simmered in rich lobster bisque infused with Persian saffron, finished with hand-harvested butter, citrus zest, and cold-pressed olive oil.",
-      image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Acquerello Carnaroli Rice", "Wild Scallops", "Tiger Prawns", "Persian Saffron", "Meyer Lemon Zest"],
-      calories: "640 kcal",
-      prepTime: "18 mins"
-    },
-    {
-      id: "main-3",
-      name: "Pan-Seared Chilean Sea Bass",
-      category: "Main Course",
-      price: 44,
-      dietary: "Gluten-Free",
-      shortDescription: "Wild-caught sea bass, miso ginger velouté, shiitake mushrooms, steamed baby bok choy.",
-      fullDescription: "Flaky, buttery sea bass pan-seared to crisp perfection, resting on a bed of braised wild forest mushrooms and ginger-scented dashi reduction.",
-      image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Chilean Sea Bass", "Shiitake Mushrooms", "White Miso", "Ginger Root", "Sesame Reduction"],
-      calories: "520 kcal",
+      id: "thali-1",
+      name: "Maharaja Heritage Royal Thali",
+      category: "Royal Thalis & Feasts",
+      price: 850,
+      dietary: "Pure Veg • Unlimited Refills",
+      shortDescription: "A grand pan-Indian royal spread: Paneer Lababdar, Dal Baati Churma, Pulao, Bread basket, Raita & Hot Jalebi.",
+      fullDescription: "Crafted on authentic bronze kansa plates to promote Ayurvedic wellness, representing the culinary capitals of India in one grand feast.",
+      image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Shahi Paneer", "Dal Makhani", "Dal Baati", "Churma", "Kashmiri Pulao", "Butter Naan", "Rabdi"],
+      calories: "980 kcal",
       prepTime: "20 mins"
     },
     {
-      id: "main-4",
-      name: "Herb Crusted Rack of Lamb",
-      category: "Main Course",
-      price: 46,
-      dietary: "Halal Available",
-      shortDescription: "New Zealand lamb chops with Dijon-herb crust, parsnip puree, pomegranate jus.",
-      fullDescription: "Roasted tender medium-rare lamb racks crusted with parsley, thyme, and sourdough crumb, served alongside roasted root vegetables and reduced port glaze.",
-      image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Pasture-Raised Lamb", "Parsnip Purée", "Fresh Thyme & Rosemary", "Pomegranate Reduction"],
-      calories: "710 kcal",
-      prepTime: "22 mins"
-    },
-
-    // Wood-Fired Pizza
-    {
-      id: "piz-1",
-      name: "Burrata & Fig Napoletana",
-      category: "Wood-Fired Pizza",
-      price: 26,
-      dietary: "Vegetarian",
-      shortDescription: "San Marzano tomatoes, fresh pugliese burrata, black mission figs, wild arugula, aged balsamic.",
-      fullDescription: "Fermented for 72 hours using ancient stone-ground flour, baked at 900°F in our stone wood-fired oven for a blistered, ethereal crust.",
-      image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["72hr Fermented Dough", "Pugliese Burrata", "Mission Figs", "Aged Modena Balsamic", "Micro Basil"],
-      calories: "780 kcal",
-      prepTime: "12 mins"
-    },
-    {
-      id: "piz-2",
-      name: "Truffle Funghi & Prosciutto",
-      category: "Wood-Fired Pizza",
-      price: 28,
-      dietary: "Chef Specialty",
-      shortDescription: "White cream sauce, fior di latte, roasted wild porcini, 24-month Parma prosciutto, white truffle oil.",
-      fullDescription: "Crafted on a crisp charred base with delicate layers of melted mozzarella, earthy roasted mushrooms, and paper-thin prosciutto di Parma added fresh after baking.",
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Fior di Latte Mozzarella", "Porcini Mushrooms", "Prosciutto di Parma", "White Truffle Essence"],
+      id: "thali-2",
+      name: "Awadhi Dawat Thali",
+      category: "Royal Thalis & Feasts",
+      price: 690,
+      dietary: "Pure Veg • Nawabi Specialty",
+      shortDescription: "Lucknowi Subz Biryani, Paneer Korma, Smoked Baingan Bharta, Taftan Bread & Shahi Tukda.",
+      fullDescription: "Subtle aromas of kewra, saffron, and slow-dum cooking from the royal kitchens of Lucknow.",
+      image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Dum Basmati Biryani", "Awadhi Paneer", "Taftan", "Burani Raita", "Shahi Tukda"],
       calories: "820 kcal",
-      prepTime: "12 mins"
-    },
-    {
-      id: "piz-3",
-      name: "Spicy Calabrian Diavola",
-      category: "Wood-Fired Pizza",
-      price: 25,
-      dietary: "Spicy",
-      shortDescription: "Crushed San Marzano, spicy Soppressata, 'Nduja sausage, fresh chili oil, hot honey drizzle.",
-      fullDescription: "Bold southern Italian flavors with fiery sausage crumbles, melted creamy mozzarella, and an addictive touch of habanero wildflower hot honey.",
-      image: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Calabrian 'Nduja", "Spicy Soppressata", "San Marzano Tomatoes", "Smoked Hot Honey", "Fresh Oregano"],
-      calories: "860 kcal",
-      prepTime: "12 mins"
+      prepTime: "18 mins"
     },
 
-    // Gourmet Burgers
+    // Regional Starters & Chaat
     {
-      id: "brg-1",
-      name: "Smoked Wagyu Truffle Burger",
-      category: "Gourmet Burgers",
-      price: 27,
-      dietary: "Chef Specialty",
-      shortDescription: "Double smash Wagyu patties, smoked Gruyère, caramelized shallots, black garlic truffle aioli on brioche.",
-      fullDescription: "Two 4oz Wagyu patties seared crusty on the griddle, dripping with melted Swiss Gruyère and rich black garlic mayonnaise on a house-toasted milk brioche bun.",
-      image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["100% Wagyu Beef", "Smoked Gruyère", "Black Garlic Aioli", "Caramelized French Shallots", "Artisanal Brioche"],
-      calories: "920 kcal",
-      prepTime: "15 mins"
+      id: "str-1",
+      name: "Banarasi Palak Patta Chaat",
+      category: "Regional Starters & Chaat",
+      price: 260,
+      dietary: "Street Heritage",
+      shortDescription: "Crispy fried baby spinach leaves coated in spiced gram flour, sweetened churned curd, saunth chutney & sev.",
+      fullDescription: "An explosion of sweet, tangy, and crunchy notes perfected along the ghats of Varanasi.",
+      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Crisp Spinach Leaves", "Spiced Dahi", "Date-Tamarind Chutney", "Mint Chutney", "Pomegranate Seeds"],
+      calories: "280 kcal",
+      prepTime: "10 mins"
     },
     {
-      id: "brg-2",
-      name: "Crispy Buttermilk Chicken Burger",
-      category: "Gourmet Burgers",
-      price: 22,
-      dietary: "Spicy",
-      shortDescription: "24hr brined chicken thigh, Nashville spice dip, fermented jalapeño slaw, house bread & butter pickles.",
-      fullDescription: "Golden crispy fried chicken thigh soaked in spice-infused hot oil, layered with crunchy purple cabbage slaw and creamy herb dressing on sesame potato bun.",
-      image: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Organic Chicken Thigh", "Nashville Cayenne Glaze", "Pickled Jalapeños", "Herbed Slaw", "Potato Bun"],
-      calories: "780 kcal",
+      id: "str-2",
+      name: "Zaffrani Paneer Tikka Angaar",
+      category: "Regional Starters & Chaat",
+      price: 480,
+      dietary: "Clay Oven Tandoor",
+      shortDescription: "Malai paneer cubes marinated in Persian saffron, roasted bell peppers, hung curd & crushed spices.",
+      fullDescription: "Char-grilled to golden tenderness in our clay tandoor, served with laccha onions and tangy chutney.",
+      image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Fresh Paneer", "Saffron", "Hung Curd", "Degi Mirch", "Mint Relish"],
+      calories: "410 kcal",
+      prepTime: "16 mins"
+    },
+    {
+      id: "str-3",
+      name: "Dahi Ke Kebab & Beetroot Tikki",
+      category: "Regional Starters & Chaat",
+      price: 360,
+      dietary: "Melt-In-Mouth",
+      shortDescription: "Silky spiced yogurt patties with a crisp golden exterior, stuffed with roasted nuts and fresh coriander.",
+      fullDescription: "Delicate textured vegetarian kebabs pan-fried on cast iron tawa with pure cow ghee.",
+      image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Hung Curd", "Roasted Cumin", "Cardamom", "Cashews", "Beetroot Crust"],
+      calories: "320 kcal",
       prepTime: "14 mins"
     },
 
-    // Desserts
+    // Heritage Curries & Dal
+    {
+      id: "cur-1",
+      name: "Slow-Simmered Dal Maatribhoomi",
+      category: "Heritage Curries & Dal",
+      price: 420,
+      dietary: "24-Hour Charcoal Simmer",
+      shortDescription: "Whole black urad lentils simmered overnight with fresh churned white makhan and vine tomatoes.",
+      fullDescription: "Our proudest recipe — rich, smoky, and velvety without overpowering heavy creams.",
+      image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Urad Dal", "Churned Makhan", "Tomato Reduction", "Kasuri Methi"],
+      calories: "460 kcal",
+      prepTime: "15 mins"
+    },
+    {
+      id: "cur-2",
+      name: "Paneer Makhanwala Rogan",
+      category: "Heritage Curries & Dal",
+      price: 460,
+      dietary: "Classic Pure Veg",
+      shortDescription: "Tender cottage cheese simmered in a silky tomato gravy with crushed cashews and aromatic mace.",
+      fullDescription: "An ode to classic North Indian banquet recipes made without onion-garlic options also available upon request.",
+      image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["A2 Milk Paneer", "San Marzano Style Desi Tomatoes", "Makhana Cream", "Green Cardamom"],
+      calories: "510 kcal",
+      prepTime: "16 mins"
+    },
+    {
+      id: "cur-3",
+      name: "Kashmiri Dum Aloo Badami",
+      category: "Heritage Curries & Dal",
+      price: 390,
+      dietary: "Kashmiri Heritage",
+      shortDescription: "Pricked baby potatoes deep fried and simmered in a fennel and dry ginger infused curd gravy.",
+      fullDescription: "Traditional wazwan-style vegetarian curry carrying the authentic fiery red hue of dried Kashmiri chillies.",
+      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Baby Potatoes", "Saunf (Fennel)", "Sonth (Dry Ginger)", "Almond Paste", "Asafoetida"],
+      calories: "420 kcal",
+      prepTime: "18 mins"
+    },
+
+    // Tandoor & Clay Oven Breads
+    {
+      id: "brd-1",
+      name: "Amritsari Chur-Chur Naan Thali",
+      category: "Tandoor & Clay Oven Breads",
+      price: 320,
+      dietary: "Clay Oven Special",
+      shortDescription: "Crispy, multi-layered stuffed bread crushed with desi ghee, served with Pindi Chhole & Boondi Raita.",
+      fullDescription: "Stuffed with seasoned paneer, spiced potatoes, and anardana seeds, baked until blistered in the tandoor.",
+      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Spiced Paneer", "Amritsari Chhole", "Desi Ghee", "Pickled Onions"],
+      calories: "620 kcal",
+      prepTime: "12 mins"
+    },
+    {
+      id: "brd-2",
+      name: "Garlic Butter Laccha Paratha & Missi Roti",
+      category: "Tandoor & Clay Oven Breads",
+      price: 110,
+      dietary: "Tandoori Fresh",
+      shortDescription: "Flaky layered whole wheat paratha sprinkled with toasted garlic, kalonji seeds and freshly chopped coriander.",
+      fullDescription: "Freshly slapped against the clay walls of our wood-fired tandoor, brushed with warm clarified butter.",
+      image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Stone Ground Atta", "Roasted Garlic", "Nigella Seeds", "Cow Ghee"],
+      calories: "280 kcal",
+      prepTime: "8 mins"
+    },
+
+    // Mithai & Traditional Desserts
     {
       id: "des-1",
-      name: "Smoked Valrhona Chocolate Dome",
-      category: "Desserts",
-      price: 18,
-      dietary: "Vegetarian",
-      shortDescription: "70% dark Guanaja chocolate shell, hazelnut praline mousse, salted caramel pearls & tableside espresso pour.",
-      fullDescription: "A multisensory dessert unveiled tableside with aromatic cedar smoke, melted with hot single-origin espresso ganache over Bourbon vanilla gelato.",
-      image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Valrhona 70% Chocolate", "Piedmont Hazelnut", "Fleur de Sel Caramel", "Madagascar Vanilla Bean"],
-      calories: "510 kcal",
+      name: "Kullhad Rabdi with Crisp Desi Jalebi",
+      category: "Mithai & Traditional Desserts",
+      price: 290,
+      dietary: "Sweet Specialty",
+      shortDescription: "Spiral golden jalebis fried in pure desi ghee, served with thick pistachio malai rabdi in earthen clay pot.",
+      fullDescription: "Crispy hot jalebis paired with slow-condensed milk rabdi — an eternal favorite at Indian festive gatherings.",
+      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Pure Desi Ghee", "Saffron Syrup", "Buffalo Milk Rabdi", "Pistachio Slivers"],
+      calories: "520 kcal",
       prepTime: "10 mins"
     },
     {
       id: "des-2",
-      name: "Deconstructed Meyer Lemon Tart",
-      category: "Desserts",
-      price: 16,
-      dietary: "Vegetarian",
-      shortDescription: "Zesty lemon curd, toasted Italian meringue peaks, sable crumble, fresh raspberry coulis.",
-      fullDescription: "Silky citrus curd made with organic Meyer lemons, torched feather-light meringue, buttery almond crust crumbs and delicate micro mint garnish.",
-      image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Organic Meyer Lemons", "Torched Italian Meringue", "Almond Sable", "Wild Raspberry Puree"],
-      calories: "410 kcal",
-      prepTime: "8 mins"
+      name: "Kesari Rasmalai with Roasted Almonds",
+      category: "Mithai & Traditional Desserts",
+      price: 240,
+      dietary: "Signature Sweet",
+      shortDescription: "Soft cottage cheese dumplings soaked in chilled saffron and green cardamom scented milk cream.",
+      fullDescription: "Silky, delicate dessert garnished with slivered pistachios and real silver varq.",
+      image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Fresh Chenna", "Kashmiri Kesar", "Cardamom Milk", "Crushed Almonds"],
+      calories: "340 kcal",
+      prepTime: "5 mins"
     },
 
-    // Handcrafted Drinks
+    // Desi Shikanji & Coolers
     {
       id: "drk-1",
-      name: "Smoked Rosemary Old Fashioned",
-      category: "Handcrafted Drinks",
-      price: 19,
-      dietary: "Signature Cocktail",
-      shortDescription: "Small-batch Kentucky bourbon, Angostura bitters, burnt orange peel, flamed rosemary sprig.",
-      fullDescription: "Stirred to freezing temperature over crystal-clear artisan ice block, trapped in a cloche with toasted rosemary smoke for an unforgettable aroma.",
-      image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Kentucky Straight Bourbon", "Artisan Bitters", "Charred Rosemary", "Organic Orange Oils"],
-      calories: "190 kcal",
-      prepTime: "5 mins"
+      name: "Kulhad Masala Chaas & Jaljeera",
+      category: "Desi Shikanji & Coolers",
+      price: 140,
+      dietary: "Digestive Cooler",
+      shortDescription: "Churned buttermilk tempered with roasted cumin seeds, fresh coriander, ginger, black salt and mint.",
+      fullDescription: "Served ice cold in rustic earthen kulhads that infuse a natural earthy scent into every sip.",
+      image: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Fresh Dahi Churn", "Bhuna Jeera", "Kala Namak", "Fresh Pudina"],
+      calories: "85 kcal",
+      prepTime: "4 mins"
     },
     {
       id: "drk-2",
-      name: "Blood Orange & Hibiscus Spritz",
-      category: "Handcrafted Drinks",
-      price: 16,
-      dietary: "Zero-Proof Option Available",
-      shortDescription: "Botanical aperitivo, freshly pressed blood orange juice, sparkling prosecco, wild hibiscus flower.",
-      fullDescription: "Vibrant and refreshing effervescence with bitter-sweet Italian notes, topped with chilled mineral water and ruby hibiscus syrup.",
-      image: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Blood Orange Extract", "Wild Hibiscus Flower", "Italian Prosecco", "Sparkling Spring Water"],
-      calories: "140 kcal",
-      prepTime: "4 mins"
+      name: "Banarasi Thandai with Rose Petals",
+      category: "Desi Shikanji & Coolers",
+      price: 220,
+      dietary: "Royal Beverage",
+      shortDescription: "Traditional chilled full-cream milk blended with almonds, melon seeds, fennel, black pepper, and saffron.",
+      fullDescription: "The timeless festive refresher of Kashi, topped with dried damask rose petals and crushed pistachios.",
+      image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Chilled Milk", "Almond & Melon Paste", "Saunf & Kali Mirch", "Kesar & Rose Essence"],
+      calories: "260 kcal",
+      prepTime: "6 mins"
     }
   ],
 
-  // Gallery Photos (Food, Interior, Chef Craft, Atmosphere)
+  // Gallery Photos (Real restaurant ambiance & culinary heritage)
   gallery: [
     {
       id: "gal-1",
-      title: "Artisanal Charcoal Seared Filet",
-      type: "Plated Food",
-      image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80",
-      caption: "Fire, smoke, and precision cooking with dry-aged prime beef."
+      title: "Heritage Red Sandstone Facade",
+      type: "Restaurant Architecture",
+      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+      caption: "Arched heritage windows and warm amber illumination welcoming diners at Sector 38, Noida."
     },
     {
       id: "gal-2",
-      title: "Intimate Warm Dining Hall",
-      type: "Restaurant Interior",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
-      caption: "Soft amber illumination, natural textures, and acoustic comfort designed for conversation."
+      title: "Royal Maharaja Thali Spread",
+      type: "Plated Heritage Food",
+      image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=1200&q=80",
+      caption: "Fourteen regional vegetarian specialties served in handcrafted bronze kansa ware."
     },
     {
       id: "gal-3",
-      title: "Handcrafted Plating In Motion",
-      type: "Chef Preparation",
-      image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
-      caption: "Our culinary artisans finalizing every plate with meticulous attention."
+      title: "Artisanal Jalebi & Rabdi Station",
+      type: "Mithai Craftsmanship",
+      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80",
+      caption: "Golden spirals fried in pure desi ghee and bathed in rich saffron rabdi."
     },
     {
       id: "gal-4",
-      title: "Cocktail Laboratory & Lounge",
+      title: "Hand-Painted Folk Pillars & Interior Ambiance",
       type: "Dining Atmosphere",
-      image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80",
-      caption: "Small-batch spirits infused with botanical herbs and smoked aromatics."
+      image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1200&q=80",
+      caption: "Earthy terracotta textures, traditional Indian motifs, and comfortable family seating."
     },
     {
       id: "gal-5",
-      title: "Rustic Stone Wood-Fired Hearth",
+      title: "Smoky Clay Oven Tandoor Crafts",
       type: "Chef Preparation",
-      image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80",
-      caption: "Burning aged white oak at 900°F for authentic sourdough crusts."
+      image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=1200&q=80",
+      caption: "Charcoal roasted paneer tikkas and blistered breads infused with clay kiln aromas."
     },
     {
       id: "gal-6",
-      title: "Evening Candlelit Tablescape",
-      type: "Dining Atmosphere",
-      image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1200&q=80",
-      caption: "An ambiance created for memorable anniversary dinners and shared laughter."
+      title: "Festive Banarasi Thandai & Coolers",
+      type: "Desi Beverages",
+      image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80",
+      caption: "Saffron and dry-fruit coolers served in earthen kulhads."
     }
   ],
 
   // Brand Story / About Details
   about: {
-    headline: "A Passion For Honest Flavor & Mindful Craft",
-    paragraph1: "Founded on the philosophy that dining should be an immersive sensory journey, our kitchen blends time-honored European culinary traditions with contemporary artistic plating. Every morning starts with fresh deliveries from our network of local organic farmers and sustainable fisheries.",
-    paragraph2: "From our 72-hour naturally fermented pizza dough baked in a stone-clad wood oven to dry-aged steaks finished over white oak coals, we honor simplicity, pure ingredients, and heartfelt hospitality.",
+    headline: "A Love Letter To The Culinary Soul Of Bharat",
+    paragraph1: "Maatribhoomi (मातृभूमि) is born from a deep reverence for India's diverse gastronomic traditions. From the royal banquets of Rajasthan and Awadh to the temple kitchens of South India and vibrant street food lanes of Banaras, our kitchen celebrates authentic, unadulterated vegetarian food made with pure cow ghee and traditional recipes.",
+    paragraph2: "Every detail — from our red sandstone arches and hand-painted folk art pillars to our slow-simmered 24-hour Dal and bronze dining thalis — has been curated to give families and food lovers an unforgettable celebration of Indian culture and warmth.",
     stats: [
-      { label: "Locally Sourced Ingredients", value: "95%" },
-      { label: "Fermentation Process", value: "72 hrs" },
-      { label: "Wood-Fired Hearth Temp", value: "900°F" },
-      { label: "Curated Wine Labels", value: "140+" }
+      { label: "Pure Veg Dishes", value: "100%" },
+      { label: "Google Rating", value: "4.3 ★" },
+      { label: "Verified Reviews", value: "534+" },
+      { label: "Price For Two", value: "₹800" }
     ]
   }
 };
