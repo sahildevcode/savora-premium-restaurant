@@ -1,13 +1,14 @@
-// Centralized Restaurant Brand & Business Configuration for TEZPATTA (तेजपत्ता)
-// Design Theme: Royal Burgundy & Champagne Gold Palace Dining
+// TEZPATTA — Royal Signature Official 4-Color Palette Configuration
+// Deep Burgundy (#240B10) | Champagne Gold (#C99B52) | Warm Ivory (#FFF2E8) | Accent Rose (#E83E60)
 
 export const RESTAURANT_CONFIG = {
   // Brand Identity
   brand: {
     name: "TEZPATTA",
     hindiName: "तेजपत्ता",
+    paletteName: "Royal Signature",
     tagline: "Royal Indian Fine Dining & Heritage Gastronomy",
-    subtitle: "Where time-honored North Indian handi recipes, tandoor crafts, and Awadhi culinary secrets meet regal palace hospitality.",
+    subtitle: "Where royal Awadhi handi gravies and clay tandoor crafts meet regal palace hospitality.",
     cuisine: "North Indian • Awadhi • Tandoori • Pure Veg",
     established: "2018",
     currency: "₹",
@@ -18,21 +19,19 @@ export const RESTAURANT_CONFIG = {
     opensSoon: "Opens Today • 6:00 PM",
   },
 
-  // Color Palette Reference: Royal Burgundy & Champagne Gold
+  // EXACT PALETTE from provided swatch:
   theme: {
     deepBurgundy: "#240B10",
-    darkWine: "#310D16",
-    surfaceWine: "#3B121C",
-    cardWine: "#310D16",
     champagneGold: "#C99B52",
-    champagneLight: "#DFC08A",
     warmIvory: "#FFF2E8",
-    roseAccent: "#E83E60",
-    mutedText: "#C9B8B8",
-    borderGold: "rgba(201, 155, 82, 0.28)",
+    accentRose: "#E83E60",
+    darkWine: "#2D0E15",
+    surfaceBurgundy: "#38121B",
+    mutedIvory: "#C9B8B8",
+    borderGold: "rgba(201, 155, 82, 0.35)",
   },
 
-  // Contact & Location Details from Google Maps profile
+  // Contact Details
   contact: {
     phone: "+91 94122 05500",
     phoneDisplay: "+91 94122 05500",
@@ -69,7 +68,7 @@ export const RESTAURANT_CONFIG = {
     "Mithai & Artisanal Shakes",
   ],
 
-  // Signature Highlights (Featured Prominently)
+  // Signature Highlights
   signatureDishes: [
     {
       id: "sig-1",
