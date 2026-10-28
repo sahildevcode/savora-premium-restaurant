@@ -28,11 +28,11 @@ export const ProductDetailsModal = () => {
         setSelectedProduct(null);
         setQuantity(1);
       }}
-      className="fixed inset-0 z-50 bg-[#120D0A]/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3.5 sm:p-6 animate-in fade-in duration-200"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative max-w-2xl w-full bg-[#1C1410] rounded-2xl overflow-hidden border border-[#3D2B20] shadow-2xl flex flex-col max-h-[90vh]"
+        className="relative max-w-xl w-full bg-[#180B0D] rounded-2xl overflow-hidden border border-[#4A1D24] shadow-2xl flex flex-col max-h-[90vh]"
       >
         {/* Close Button */}
         <button
@@ -40,60 +40,60 @@ export const ProductDetailsModal = () => {
             setSelectedProduct(null);
             setQuantity(1);
           }}
-          className="absolute top-4 right-4 z-10 p-2.5 rounded-full bg-[#120D0A]/80 hover:bg-[#E07A2B] text-white hover:text-[#120D0A] border border-[#3D2B20] transition-colors cursor-pointer"
-          aria-label="Close product modal"
+          className="absolute top-3 right-3 z-10 p-2 rounded-full bg-[#180B0D]/80 hover:bg-[#E11D48] text-white border border-[#4A1D24] transition-colors cursor-pointer"
+          aria-label="Close modal"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4" />
         </button>
 
         {/* Scrollable Modal Content */}
         <div className="overflow-y-auto">
           {/* Header Image */}
-          <div className="relative aspect-16/9 w-full bg-[#241B16]">
+          <div className="relative aspect-16/9 w-full bg-[#221013]">
             <img
               src={selectedProduct.image}
               alt={selectedProduct.name}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1C1410] via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#180B0D] via-transparent to-transparent" />
             
-            <div className="absolute bottom-4 left-6 flex items-center gap-2 px-3 py-1 rounded-md bg-[#120D0A]/85 backdrop-blur-sm border border-[#3D2B20] text-xs font-semibold text-[#E8B358]">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block border border-emerald-300" />
+            <div className="absolute bottom-3 left-4 flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#180B0D]/90 backdrop-blur-sm border border-[#4A1D24] text-xs font-semibold text-[#FB7185]">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block border border-emerald-300" />
               <span>{selectedProduct.dietary || "100% Pure Veg"}</span>
             </div>
           </div>
 
           {/* Details Body */}
-          <div className="p-6 sm:p-8 space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+          <div className="p-5 sm:p-7 space-y-4 sm:space-y-5">
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1.5">
               <div>
-                <span className="text-xs uppercase font-bold tracking-widest text-[#E07A2B]">
+                <span className="text-[10px] uppercase font-bold tracking-widest text-[#FB7185]">
                   {selectedProduct.category}
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#FBF7EE] mt-1">
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#FFF5F5] mt-0.5">
                   {selectedProduct.name}
                 </h3>
               </div>
-              <span className="text-2xl sm:text-3xl font-serif font-bold text-[#E8B358]">
+              <span className="text-xl sm:text-2xl font-serif font-bold text-[#F59E0B]">
                 ₹{selectedProduct.price}
               </span>
             </div>
 
-            <p className="text-sm text-[#DFD5C2]/85 leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#E2D1D4]/85 leading-relaxed">
               {selectedProduct.fullDescription || selectedProduct.shortDescription}
             </p>
 
-            {/* Ingredients & Prep Details */}
+            {/* Ingredients */}
             {selectedProduct.ingredients && selectedProduct.ingredients.length > 0 && (
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-[#DFD5C2]/70 mb-2">
-                  Heritage Ingredients & Tadka:
+                <h4 className="text-[11px] font-bold uppercase tracking-wider text-[#E2D1D4]/70 mb-2">
+                  Key Spices & Ingredients:
                 </h4>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5">
                   {selectedProduct.ingredients.map((ing, i) => (
                     <span
                       key={i}
-                      className="text-xs px-2.5 py-1 rounded-sm bg-[#241B16] border border-[#3D2B20] text-[#DFD5C2]"
+                      className="text-[10px] sm:text-xs px-2.5 py-1 rounded-sm bg-[#221013] border border-[#4A1D24] text-[#E2D1D4]"
                     >
                       {ing}
                     </span>
@@ -102,36 +102,20 @@ export const ProductDetailsModal = () => {
               </div>
             )}
 
-            {/* Prep Time & Calories if provided */}
-            <div className="flex items-center gap-6 pt-4 border-t border-[#3D2B20] text-xs text-[#DFD5C2]/70">
-              {selectedProduct.calories && (
-                <div>
-                  <span className="text-[#DFD5C2]/50 block">Poshan (Calories)</span>
-                  <span className="font-semibold text-white">{selectedProduct.calories}</span>
-                </div>
-              )}
-              {selectedProduct.prepTime && (
-                <div>
-                  <span className="text-[#DFD5C2]/50 block">Rasoi Preparation</span>
-                  <span className="font-semibold text-white">{selectedProduct.prepTime}</span>
-                </div>
-              )}
-            </div>
-
             {/* Quantity Selector & Add To Cart Bar */}
-            <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
-              <div className="flex items-center justify-between sm:justify-start gap-4 p-1.5 rounded-lg bg-[#241B16] border border-[#3D2B20]">
+            <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+              <div className="flex items-center justify-between sm:justify-start gap-4 p-1 rounded-lg bg-[#221013] border border-[#4A1D24]">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="p-2 rounded-md hover:bg-[#3D2B20] text-white transition-colors cursor-pointer"
+                  className="p-2 rounded-md hover:bg-[#2B161A] text-white transition-colors cursor-pointer"
                   aria-label="Decrease quantity"
                 >
                   <Minus className="w-4 h-4" />
                 </button>
-                <span className="text-sm font-bold text-white px-3">{quantity}</span>
+                <span className="text-xs sm:text-sm font-bold text-white px-2">{quantity}</span>
                 <button
                   onClick={() => setQuantity(quantity + 1)}
-                  className="p-2 rounded-md hover:bg-[#3D2B20] text-white transition-colors cursor-pointer"
+                  className="p-2 rounded-md hover:bg-[#2B161A] text-white transition-colors cursor-pointer"
                   aria-label="Increase quantity"
                 >
                   <Plus className="w-4 h-4" />
@@ -140,10 +124,10 @@ export const ProductDetailsModal = () => {
 
               <button
                 onClick={handleAddToCart}
-                className="grow inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-sm bg-[#E07A2B] hover:bg-[#E8B358] text-[#120D0A] font-semibold text-xs uppercase tracking-wider transition-all shadow-md hover:shadow-[#E07A2B]/30 cursor-pointer"
+                className="grow inline-flex items-center justify-center gap-2 py-3 px-5 rounded-lg bg-gradient-to-r from-[#E11D48] to-[#BE123C] hover:from-[#BE123C] text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-md active:scale-98"
               >
                 <ShoppingBag className="w-4 h-4" />
-                {addedNotice ? 'Thali Mein Shamil Kiya!' : `Add To Thali • ₹${selectedProduct.price * quantity}`}
+                {addedNotice ? 'Added To Order!' : `Add To Order • ₹${selectedProduct.price * quantity}`}
               </button>
             </div>
 

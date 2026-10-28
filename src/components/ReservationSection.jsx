@@ -46,40 +46,40 @@ export const ReservationSection = () => {
   const todayString = new Date().toISOString().split('T')[0];
 
   return (
-    <section id="reservations" className="py-24 bg-[#0C120C] relative">
+    <section id="reservations" className="py-20 sm:py-24 bg-[#180B0D] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs uppercase font-bold tracking-[0.25em] text-[#34D399]">
-            Reserve Your Experience
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-[#F5F8F3] mt-2 mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <span className="text-[11px] uppercase font-bold tracking-[0.25em] text-[#FB7185]">
             Table Booking & Reservations
+          </span>
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-medium text-[#FFF5F5] mt-1 mb-3">
+            Book A Table Online
           </h2>
-          <div className="w-16 h-0.5 bg-[#D97706] mx-auto mb-4" />
-          <p className="text-sm sm:text-base text-[#D1DCD0]/70">
-            Garh Road, Meerut par fine-dining family dinners, kitty parties aur celebrations ke liye table book karein.
+          <div className="w-16 h-0.5 bg-gradient-to-r from-[#E11D48] to-[#F59E0B] mx-auto mb-3" />
+          <p className="text-xs sm:text-base text-[#E2D1D4]/75">
+            Opposite Apex Tower, Garh Road, Meerut par fine-dining family dinners aur celebrations ke liye direct table book karein.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Reservation Form */}
-          <div className="lg:col-span-7 bg-[#141D14] rounded-2xl border border-[#2A3A2A] p-6 sm:p-8 shadow-xl">
-            <h3 className="text-xl font-serif font-semibold text-[#F5F8F3] mb-2">
-              Book A Table at Tezpatta
+          <div className="lg:col-span-7 bg-[#221013] rounded-2xl border border-[#4A1D24] p-5 sm:p-8 shadow-2xl shadow-black/60">
+            <h3 className="text-lg sm:text-xl font-serif font-semibold text-[#FFF5F5] mb-1">
+              Table Reservation Form
             </h3>
-            <p className="text-xs text-[#D1DCD0]/70 mb-6">
+            <p className="text-xs text-[#E2D1D4]/70 mb-5">
               Reservations are held for 15 minutes past scheduled arrival time.
             </p>
 
             {status && (
               <div
-                className={`p-4 rounded-lg mb-6 flex items-start gap-3 border ${
+                className={`p-3.5 sm:p-4 rounded-lg mb-5 flex items-start gap-2.5 border ${
                   status.type === 'success'
-                    ? 'bg-[#1C271C] border-emerald-500/50 text-emerald-300'
-                    : 'bg-[#1C271C] border-amber-500/50 text-amber-300'
+                    ? 'bg-[#2B161A] border-emerald-500/50 text-emerald-300'
+                    : 'bg-[#2B161A] border-amber-500/50 text-amber-300'
                 }`}
               >
                 {status.type === 'success' ? (
@@ -88,15 +88,15 @@ export const ReservationSection = () => {
                   <AlertCircle className="w-5 h-5 shrink-0 text-amber-400 mt-0.5" />
                 )}
                 <div>
-                  <p className="text-sm font-medium">{status.message}</p>
+                  <p className="text-xs sm:text-sm font-medium">{status.message}</p>
                 </div>
               </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                 <div>
-                  <label className="block text-xs uppercase font-medium tracking-wider text-[#D1DCD0] mb-1.5">
+                  <label className="block text-[11px] uppercase font-medium tracking-wider text-[#E2D1D4] mb-1">
                     Aapka Naam *
                   </label>
                   <input
@@ -106,12 +106,12 @@ export const ReservationSection = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Rahul Sharma"
-                    className="w-full bg-[#1C271C] border border-[#2A3A2A] rounded-sm px-3.5 py-2.5 text-sm text-[#F5F8F3] placeholder-[#D1DCD0]/40 focus:outline-hidden focus:border-[#34D399] transition-colors"
+                    className="w-full bg-[#2B161A] border border-[#4A1D24] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#FFF5F5] placeholder-[#E2D1D4]/40 focus:outline-hidden focus:border-[#E11D48] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase font-medium tracking-wider text-[#D1DCD0] mb-1.5">
+                  <label className="block text-[11px] uppercase font-medium tracking-wider text-[#E2D1D4] mb-1">
                     Mobile Number *
                   </label>
                   <input
@@ -121,14 +121,14 @@ export const ReservationSection = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 94122 05500"
-                    className="w-full bg-[#1C271C] border border-[#2A3A2A] rounded-sm px-3.5 py-2.5 text-sm text-[#F5F8F3] placeholder-[#D1DCD0]/40 focus:outline-hidden focus:border-[#34D399] transition-colors"
+                    className="w-full bg-[#2B161A] border border-[#4A1D24] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#FFF5F5] placeholder-[#E2D1D4]/40 focus:outline-hidden focus:border-[#E11D48] transition-colors"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4">
                 <div>
-                  <label className="block text-xs uppercase font-medium tracking-wider text-[#D1DCD0] mb-1.5">
+                  <label className="block text-[11px] uppercase font-medium tracking-wider text-[#E2D1D4] mb-1">
                     Tarikh (Date) *
                   </label>
                   <input
@@ -138,19 +138,19 @@ export const ReservationSection = () => {
                     required
                     value={formData.date}
                     onChange={handleChange}
-                    className="w-full bg-[#1C271C] border border-[#2A3A2A] rounded-sm px-3 py-2 text-sm text-[#F5F8F3] focus:outline-hidden focus:border-[#34D399] transition-colors"
+                    className="w-full bg-[#2B161A] border border-[#4A1D24] rounded-lg px-3 py-2 text-xs sm:text-sm text-[#FFF5F5] focus:outline-hidden focus:border-[#E11D48] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase font-medium tracking-wider text-[#D1DCD0] mb-1.5">
+                  <label className="block text-[11px] uppercase font-medium tracking-wider text-[#E2D1D4] mb-1">
                     Samay (Time) *
                   </label>
                   <select
                     name="time"
                     value={formData.time}
                     onChange={handleChange}
-                    className="w-full bg-[#1C271C] border border-[#2A3A2A] rounded-sm px-3 py-2.5 text-sm text-[#F5F8F3] focus:outline-hidden focus:border-[#34D399] transition-colors"
+                    className="w-full bg-[#2B161A] border border-[#4A1D24] rounded-lg px-3 py-2.5 text-xs sm:text-sm text-[#FFF5F5] focus:outline-hidden focus:border-[#E11D48] transition-colors"
                   >
                     <option value="18:00">6:00 PM (Opening)</option>
                     <option value="18:30">6:30 PM</option>
@@ -165,16 +165,16 @@ export const ReservationSection = () => {
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase font-medium tracking-wider text-[#D1DCD0] mb-1.5">
+                  <label className="block text-[11px] uppercase font-medium tracking-wider text-[#E2D1D4] mb-1">
                     Guests *
                   </label>
                   <select
                     name="guests"
                     value={formData.guests}
                     onChange={handleChange}
-                    className="w-full bg-[#1C271C] border border-[#2A3A2A] rounded-sm px-3 py-2.5 text-sm text-[#F5F8F3] focus:outline-hidden focus:border-[#34D399] transition-colors"
+                    className="w-full bg-[#2B161A] border border-[#4A1D24] rounded-lg px-3 py-2.5 text-xs sm:text-sm text-[#FFF5F5] focus:outline-hidden focus:border-[#E11D48] transition-colors"
                   >
-                    <option value="2">2 Guests (Table for Two)</option>
+                    <option value="2">2 Guests (Couple Table)</option>
                     <option value="4">4 Guests (Family Table)</option>
                     <option value="6">6 Guests</option>
                     <option value="8">8 Guests (Large Family)</option>
@@ -184,23 +184,23 @@ export const ReservationSection = () => {
               </div>
 
               <div>
-                <label className="block text-xs uppercase font-medium tracking-wider text-[#D1DCD0] mb-1.5">
+                <label className="block text-[11px] uppercase font-medium tracking-wider text-[#E2D1D4] mb-1">
                   Special Notes or Jain Food Requirement (Optional)
                 </label>
                 <textarea
                   name="notes"
-                  rows="3"
+                  rows="2"
                   value={formData.notes}
                   onChange={handleChange}
                   placeholder="Jain food (no onion-garlic), birthday celebration decor, anniversary..."
-                  className="w-full bg-[#1C271C] border border-[#2A3A2A] rounded-sm p-3 text-sm text-[#F5F8F3] placeholder-[#D1DCD0]/40 focus:outline-hidden focus:border-[#34D399] transition-colors"
+                  className="w-full bg-[#2B161A] border border-[#4A1D24] rounded-lg p-3 text-xs sm:text-sm text-[#FFF5F5] placeholder-[#E2D1D4]/40 focus:outline-hidden focus:border-[#E11D48] transition-colors"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3.5 bg-[#D97706] hover:bg-[#34D399] text-[#0C120C] font-semibold text-xs uppercase tracking-wider rounded-sm transition-all duration-300 shadow-md hover:shadow-[#D97706]/30 cursor-pointer disabled:opacity-50"
+                className="w-full py-3.5 bg-gradient-to-r from-[#E11D48] to-[#BE123C] hover:from-[#BE123C] hover:to-[#9F1239] text-white font-semibold text-xs uppercase tracking-wider rounded-lg transition-all duration-300 shadow-lg shadow-[#E11D48]/30 cursor-pointer disabled:opacity-50 active:scale-98"
               >
                 {isSubmitting ? 'Checking Table Availability...' : 'Confirm Table Booking'}
               </button>
@@ -208,23 +208,23 @@ export const ReservationSection = () => {
           </div>
 
           {/* Contact, Operating Hours, Map */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-4 sm:space-y-6">
             
-            <div className="bg-[#141D14] rounded-2xl border border-[#2A3A2A] p-6 sm:p-8">
-              <h3 className="text-lg font-serif font-semibold text-[#F5F8F3] mb-4">
+            <div className="bg-[#221013] rounded-2xl border border-[#4A1D24] p-5 sm:p-7 shadow-xl">
+              <h3 className="text-base sm:text-lg font-serif font-semibold text-[#FFF5F5] mb-4">
                 Location & Direct Line
               </h3>
 
-              <div className="space-y-4 text-sm text-[#D1DCD0]">
+              <div className="space-y-3.5 text-xs sm:text-sm text-[#E2D1D4]">
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-md bg-[#1C271C] border border-[#2A3A2A] text-[#34D399] shrink-0">
+                  <div className="p-2 rounded-lg bg-[#2B161A] border border-[#4A1D24] text-[#FB7185] shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="block text-xs text-[#D1DCD0]/60">Call For Reservations</span>
+                    <span className="block text-[10px] sm:text-xs text-[#E2D1D4]/60">Call For Booking</span>
                     <a
                       href={`tel:${RESTAURANT_CONFIG.contact.phoneTel}`}
-                      className="font-semibold text-white hover:text-[#34D399] transition-colors"
+                      className="font-bold text-white hover:text-[#FB7185] transition-colors"
                     >
                       {RESTAURANT_CONFIG.contact.phoneDisplay}
                     </a>
@@ -232,12 +232,12 @@ export const ReservationSection = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-md bg-[#1C271C] border border-[#2A3A2A] text-[#34D399] shrink-0">
+                  <div className="p-2 rounded-lg bg-[#2B161A] border border-[#4A1D24] text-[#FB7185] shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="block text-xs text-[#D1DCD0]/60">Landmarks & Area</span>
-                    <span className="text-white font-medium">Opposite Apex Tower, Near Vishal Mega Mart & Pantaloons, Garh Road, Mangal Pandey Nagar, Meerut</span>
+                    <span className="block text-[10px] sm:text-xs text-[#E2D1D4]/60">Address & Landmark</span>
+                    <span className="text-white font-medium">Opposite Apex Tower, Near Vishal Mega Mart & Pantaloons, Garh Road, Meerut</span>
                   </div>
                 </div>
 
@@ -247,7 +247,7 @@ export const ReservationSection = () => {
                     href={`https://wa.me/919412205500?text=Hello%20Tezpatta%20Restaurant,%20I%20would%20like%20to%20reserve%20a%20table`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 w-full justify-center px-4 py-2.5 rounded-sm bg-[#1C271C] hover:bg-[#25D366]/20 border border-[#2A3A2A] hover:border-[#25D366] text-[#25D366] text-xs font-semibold uppercase tracking-wider transition-all"
+                    className="inline-flex items-center gap-2 w-full justify-center px-4 py-2.5 rounded-lg bg-[#2B161A] hover:bg-[#25D366]/20 border border-[#4A1D24] hover:border-[#25D366] text-[#25D366] text-xs font-semibold uppercase tracking-wider transition-all"
                   >
                     <MessageSquare className="w-4 h-4" />
                     Book via WhatsApp
@@ -256,19 +256,19 @@ export const ReservationSection = () => {
               </div>
 
               {/* Hours Breakdown */}
-              <div className="mt-6 pt-6 border-t border-[#2A3A2A]">
-                <div className="flex items-center justify-between mb-3">
-                  <h4 className="text-xs uppercase font-bold tracking-wider text-[#34D399]">
-                    Dining Timings
+              <div className="mt-5 pt-5 border-t border-[#4A1D24]">
+                <div className="flex items-center justify-between mb-2.5">
+                  <h4 className="text-[11px] uppercase font-bold tracking-wider text-[#FB7185]">
+                    Dinner Timings
                   </h4>
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 font-medium border border-amber-500/30">
-                    Opens Soon • 6 PM
+                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-[#F59E0B] font-semibold border border-amber-500/30">
+                    Opens 6:00 PM
                   </span>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-1.5">
                   {RESTAURANT_CONFIG.hours.map((h, i) => (
-                    <div key={i} className="flex justify-between text-xs text-[#D1DCD0]">
-                      <span className="text-[#D1DCD0]/80">{h.days}</span>
+                    <div key={i} className="flex justify-between text-xs text-[#E2D1D4]">
+                      <span className="text-[#E2D1D4]/80">{h.days}</span>
                       <span className="font-medium text-white">{h.time}</span>
                     </div>
                   ))}
@@ -278,14 +278,11 @@ export const ReservationSection = () => {
             </div>
 
             {/* Address & Google Maps Embed Card */}
-            <div className="bg-[#141D14] rounded-2xl border border-[#2A3A2A] p-6 overflow-hidden">
-              <div className="mb-3">
-                <span className="text-xs text-[#D1DCD0]/60 uppercase tracking-wider">Google Maps Location</span>
-                <p className="text-sm font-semibold text-white">
+            <div className="bg-[#221013] rounded-2xl border border-[#4A1D24] p-5">
+              <div className="mb-2.5">
+                <span className="text-[10px] text-[#E2D1D4]/60 uppercase tracking-wider">Google Maps Link</span>
+                <p className="text-xs sm:text-sm font-semibold text-white mt-0.5">
                   {RESTAURANT_CONFIG.contact.address}
-                </p>
-                <p className="text-xs text-[#D1DCD0]">
-                  {RESTAURANT_CONFIG.contact.cityStateZip}
                 </p>
               </div>
 
@@ -293,7 +290,7 @@ export const ReservationSection = () => {
                 href={RESTAURANT_CONFIG.contact.mapLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#34D399] hover:text-[#D97706] transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#FB7185] hover:text-[#F59E0B] transition-colors"
               >
                 Directions on Google Maps &rarr;
               </a>

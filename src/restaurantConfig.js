@@ -5,32 +5,32 @@ export const RESTAURANT_CONFIG = {
   brand: {
     name: "TEZPATTA",
     hindiName: "तेजपत्ता",
-    tagline: "Flavors Steeped In Indian Heritage & Aromas",
-    subtitle: "Fine Dining Vegetarian Haven • Authentic North Indian, Tandoori & Indo-Chinese Gastronomy",
-    cuisine: "North Indian • Indo-Chinese • Tandoori",
+    tagline: "The Fine Art of Pure Vegetarian Dining",
+    subtitle: "Where royal North Indian handi gravies meet sizzling wok delicacies in an opulent, ambient sanctuary.",
+    cuisine: "North Indian • Tandoori • Indo-Chinese • Pure Veg",
     established: "2018",
     currency: "₹",
     currencyCode: "INR",
     priceRange: "₹200 – ₹1,000",
     rating: "4.3 ★ (204+ reviews)",
     pureVegBadge: "100% Pure Vegetarian",
-    opensSoon: "Opens Soon • 6:00 PM",
+    opensSoon: "Opens Today • 6:00 PM",
   },
 
-  // Color Palette: Bay Leaf Herbal Olive & Forest Green, Warm Cinnamon Amber & Charcoal
+  // Color Palette: Velvet Wine, Crimson Saffron, Warm Cream, Rich Charcoal
   theme: {
-    darkBg: "#0C120C",
-    surfaceBg: "#141D14",
-    cardBg: "#1C271C",
-    accentAmber: "#D97706",
-    accentGreen: "#34D399",
-    bayLeaf: "#4E7B44",
-    creamLight: "#F5F8F3",
-    creamMuted: "#D1DCD0",
-    borderSubtle: "#2A3A2A",
+    darkBg: "#180B0D",
+    surfaceBg: "#221013",
+    cardBg: "#2B161A",
+    accentRed: "#E11D48",
+    accentRose: "#FB7185",
+    accentGold: "#F59E0B",
+    creamLight: "#FFF5F5",
+    creamMuted: "#E2D1D4",
+    borderSubtle: "#4A1D24",
   },
 
-  // Contact & Location Details from Google Maps profile
+  // Contact & Location Details
   contact: {
     phone: "+91 94122 05500",
     phoneDisplay: "+91 94122 05500",
@@ -42,11 +42,11 @@ export const RESTAURANT_CONFIG = {
     whatsapp: "+919412205500",
   },
 
-  // Operating Hours from Google Maps
+  // Operating Hours
   hours: [
-    { days: "Daily Evening Service", time: "6:00 PM – 11:30 PM" },
-    { days: "Weekend Lunch & Dinner", time: "1:00 PM – 11:30 PM" },
-    { days: "Live Status", time: "Opens soon • 6:00 PM" },
+    { days: "Evening Dinner Experience", time: "6:00 PM – 11:30 PM" },
+    { days: "Weekend Family Feast", time: "1:00 PM – 11:30 PM" },
+    { days: "Current Status", time: "Opens today • 6:00 PM" },
   ],
 
   // Social Links
@@ -67,7 +67,7 @@ export const RESTAURANT_CONFIG = {
     "Desserts & Artisanal Shakes",
   ],
 
-  // Signature Highlights (Featured prominently)
+  // Signature Highlights
   signatureDishes: [
     {
       id: "sig-1",
@@ -76,10 +76,10 @@ export const RESTAURANT_CONFIG = {
       price: 360,
       isSpecial: true,
       dietary: "Chef Signature • Pure Veg",
-      shortDescription: "Tender malai paneer cubes simmered in a velvety bay leaf (tezpatta) spiced cashew-tomato reduction with grated mawa and fresh cream.",
-      fullDescription: "Our crown jewel gravy cooked over gentle embers, perfumed with royal cumin and whole aromatic bay leaves for an unforgettable aroma and rich texture.",
+      shortDescription: "Tender malai paneer simmered in a velvet cashew-tomato gravy, perfumed with whole fragrant bay leaves and grated mawa.",
+      fullDescription: "Our crown jewel handi recipe slow-simmered over gentle embers, carrying rich sweetness, buttery depth and delicate dried fenugreek notes.",
       image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=1200&q=80",
-      ingredients: ["Fresh Malai Paneer", "Whole Tezpatta (Bay Leaf)", "Cashew Paste", "San Marzano Desi Tomatoes", "Kasuri Methi"],
+      ingredients: ["Fresh Malai Paneer", "Whole Tezpatta (Bay Leaf)", "Mawa", "Cashew Reduction", "Fresh Dairy Butter"],
       calories: "490 kcal",
       prepTime: "18 mins"
     },
@@ -89,11 +89,11 @@ export const RESTAURANT_CONFIG = {
       category: "North Indian Main Course",
       price: 320,
       isSpecial: true,
-      dietary: "Overnight Embers • Pure Veg",
-      shortDescription: "Black lentils slow-cooked overnight with white butter, fresh vine tomatoes and aromatic bay leaf infusion.",
-      fullDescription: "Cooked for over 18 hours in heritage brass pots, smoked with charcoal dhungar and whipped with hand-churned dairy butter.",
+      dietary: "18hr Slow Embers • Pure Veg",
+      shortDescription: "Black urad lentils simmered overnight on charcoal embers with fresh churned white butter and aromatic spice infusion.",
+      fullDescription: "Silky, buttery, and kissed with natural wood smoke — Meerut's most celebrated comfort food.",
       image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80",
-      ingredients: ["Urad Dal", "Kashmiri Degi Mirch", "Fresh White Butter", "Tezpatta Leaves", "Aromatic Spices"],
+      ingredients: ["Urad Dal", "White Butter", "Charcoal Smoke", "Tezpatta Leaves", "Vine Tomatoes"],
       calories: "420 kcal",
       prepTime: "15 mins"
     },
@@ -103,11 +103,11 @@ export const RESTAURANT_CONFIG = {
       category: "Signature Kebabs & Tikkas",
       price: 290,
       isSpecial: true,
-      dietary: "Kebab Special • Pure Veg",
-      shortDescription: "Golden crisp bread rolls loaded with spiced hung curd, bell peppers, fresh herbs, and pomegranate kernels.",
-      fullDescription: "Served with mint-coriander emulsion and spicy garlic dip. A signature starter perfected by Tezpatta chefs.",
+      dietary: "Crispy Delight • Pure Veg",
+      shortDescription: "Golden crisp rolled bread parcels stuffed with spiced hung curd, bell peppers, fresh herbs, and pomegranate seeds.",
+      fullDescription: "Crispy on the outside with a luscious, chilled spiced yogurt core that melts in your mouth instantly.",
       image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=1200&q=80",
-      ingredients: ["Thick Hung Curd", "Crisp Sourdough Crust", "Anardana Seeds", "Roasted Cumin", "Micro Cilantro"],
+      ingredients: ["Hung Curd", "Crisp Sourdough Shell", "Capsicum", "Anardana Seeds", "Roasted Cumin"],
       calories: "340 kcal",
       prepTime: "14 mins"
     },
@@ -117,11 +117,11 @@ export const RESTAURANT_CONFIG = {
       category: "Indo-Chinese Delights",
       price: 280,
       isSpecial: true,
-      dietary: "Indo-Chinese Crunch",
-      shortDescription: "Wok-tossed lotus stem slices and crisp potato fingers glazed in organic wild honey, toasted sesame and fiery red chilies.",
-      fullDescription: "Blistered at high flame with spring onions and ginger-soy glaze for the ultimate crunch and caramelized bite.",
+      dietary: "Wok Blistered • Sweet & Spicy",
+      shortDescription: "Crispy lotus stem slices and potato fingers glazed in pure honey, toasted sesame seeds, and fiery red chilies.",
+      fullDescription: "Blistered at smoking wok temperatures for unmatched crunch and sticky caramelized goodness.",
       image: "https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=1200&q=80",
-      ingredients: ["Crisp Lotus Stem", "Wildflower Honey", "Toasted White Sesame", "Bird Eye Chillies", "Spring Onion"],
+      ingredients: ["Lotus Stem", "Wildflower Honey", "White Sesame", "Bird Eye Chillies", "Spring Onion"],
       calories: "320 kcal",
       prepTime: "12 mins"
     }
@@ -129,14 +129,13 @@ export const RESTAURANT_CONFIG = {
 
   // Complete Menu Catalog
   menu: [
-    // Signature Kebabs & Tikkas
     {
       id: "keb-1",
       name: "Crispy Dahi Ke Shole",
       category: "Signature Kebabs & Tikkas",
       price: 290,
       dietary: "Tezpatta Special",
-      shortDescription: "Golden crisp rolled bread parcels filled with spiced spiced hung curd, bell peppers, and fresh coriander.",
+      shortDescription: "Golden crisp bread parcels loaded with spiced hung curd, bell peppers, and fresh coriander.",
       fullDescription: "Fried golden in pure groundnut oil, providing a crunch exterior with a luscious chilled velvety center.",
       image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80",
       ingredients: ["Hung Curd", "Crisp Bread Shell", "Capsicum & Onion", "Roasted Jeera"],
@@ -169,8 +168,6 @@ export const RESTAURANT_CONFIG = {
       calories: "310 kcal",
       prepTime: "15 mins"
     },
-
-    // North Indian Main Course
     {
       id: "main-1",
       name: "Handi Paneer Lababdar",
@@ -223,8 +220,6 @@ export const RESTAURANT_CONFIG = {
       calories: "430 kcal",
       prepTime: "18 mins"
     },
-
-    // Indo-Chinese Delights
     {
       id: "chn-1",
       name: "Chilli Paneer Dry / Gravy",
@@ -252,21 +247,6 @@ export const RESTAURANT_CONFIG = {
       prepTime: "10 mins"
     },
     {
-      id: "chn-3",
-      name: "Veg Manchurian in Hot Garlic Gravy",
-      category: "Indo-Chinese Delights",
-      price: 270,
-      dietary: "Wok Specialty",
-      shortDescription: "Minced vegetable dumplings simmered in rich coriander-garlic dark gravy.",
-      fullDescription: "Perfect pairing with Hakka Noodles or Fried Rice, filled with fresh cabbage, carrots and beans.",
-      image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Veg Dumplings", "Minced Garlic", "Ginger", "Celery", "Soy Gravy"],
-      calories: "330 kcal",
-      prepTime: "14 mins"
-    },
-
-    // Tandoori Breads & Kulchas
-    {
       id: "brd-1",
       name: "Amritsari Chur-Chur Naan with Chhole",
       category: "Tandoori Breads & Kulchas",
@@ -279,21 +259,6 @@ export const RESTAURANT_CONFIG = {
       calories: "580 kcal",
       prepTime: "12 mins"
     },
-    {
-      id: "brd-2",
-      name: "Garlic Butter Naan & Missi Roti",
-      category: "Tandoori Breads & Kulchas",
-      price: 90,
-      dietary: "Clay Oven Fresh",
-      shortDescription: "Refined flour naan topped with roasted garlic and coriander, finished with melted butter.",
-      fullDescription: "Slapped on clay tandoor walls and baked to bubbly perfection.",
-      image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Wheat Flour", "Minced Garlic", "Coriander", "Fresh Butter"],
-      calories: "210 kcal",
-      prepTime: "6 mins"
-    },
-
-    // Basmati Biryani & Raitas
     {
       id: "bir-1",
       name: "Tezpatta Dum Subz Biryani",
@@ -308,21 +273,6 @@ export const RESTAURANT_CONFIG = {
       prepTime: "20 mins"
     },
     {
-      id: "bir-2",
-      name: "Pomegranate (Anar) & Boondi Raita",
-      category: "Basmati Biryani & Raitas",
-      price: 150,
-      dietary: "Chilled Cooler",
-      shortDescription: "Whisked fresh curd folded with crispy chickpea boondi, roasted cumin, and sweet ruby pomegranate seeds.",
-      fullDescription: "The ultimate refreshing accompaniment to spicy gravies and tandoori breads.",
-      image: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["A2 Fresh Curd", "Anar Seeds", "Bhuna Jeera", "Black Salt", "Crispy Boondi"],
-      calories: "140 kcal",
-      prepTime: "5 mins"
-    },
-
-    // Desserts & Artisanal Shakes
-    {
       id: "des-1",
       name: "Hot Gulab Jamun with Kesari Kulfi",
       category: "Desserts & Artisanal Shakes",
@@ -334,19 +284,6 @@ export const RESTAURANT_CONFIG = {
       ingredients: ["Pure Mawa / Khoya", "Cardamom Syrup", "Pistachio Kulfi", "Silver Leaves"],
       calories: "410 kcal",
       prepTime: "6 mins"
-    },
-    {
-      id: "des-2",
-      name: "Royal Alphonso Mango Shake",
-      category: "Desserts & Artisanal Shakes",
-      price: 180,
-      dietary: "Bestseller Drink",
-      shortDescription: "Thick chilled shake made with Alphonso mango pulp, condensed milk and topped with vanilla ice cream scoop.",
-      fullDescription: "Tezpatta customer favorite beverage served in tall frosted glasses.",
-      image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Alphonso Mango Pulp", "Full Cream Milk", "Vanilla Bean Gelato", "Slivered Almonds"],
-      calories: "320 kcal",
-      prepTime: "5 mins"
     }
   ],
 

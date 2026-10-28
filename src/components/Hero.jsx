@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight, Utensils, Clock, Sparkles, MapPin, Star } from 'lucide-react';
+import { ArrowRight, Utensils, Clock, Sparkles, MapPin, Award } from 'lucide-react';
 import gsap from 'gsap';
 import { RESTAURANT_CONFIG } from '../restaurantConfig';
 
@@ -22,12 +22,12 @@ export const Hero = () => {
       })
       .from(headlineRef.current, {
         opacity: 0,
-        y: 35,
+        y: 30,
         duration: 0.8,
       }, '-=0.3')
       .from(descRef.current, {
         opacity: 0,
-        y: 25,
+        y: 20,
         duration: 0.7,
       }, '-=0.4')
       .from(ctaRef.current, {
@@ -38,9 +38,9 @@ export const Hero = () => {
       .from(imageContainerRef.current, {
         opacity: 0,
         scale: 0.95,
-        duration: 1,
+        duration: 0.9,
         ease: 'power2.out',
-      }, '-=0.7');
+      }, '-=0.6');
     }, heroRef);
 
     return () => ctx.revert();
@@ -49,7 +49,7 @@ export const Hero = () => {
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const navOffset = 80;
+      const navOffset = 70;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - navOffset;
       window.scrollTo({
@@ -63,114 +63,119 @@ export const Hero = () => {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-[92vh] flex items-center pt-28 pb-16 overflow-hidden bg-[#0C120C]"
+      className="relative min-h-[92vh] flex items-center pt-24 sm:pt-28 pb-16 overflow-hidden bg-[#180B0D]"
     >
-      {/* Warm Forest Green & Cinnamon Amber glow */}
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#4E7B44]/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-[#D97706]/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Luxury Red / Wine Glows */}
+      <div className="absolute top-10 left-0 w-80 sm:w-[500px] h-80 sm:h-[500px] bg-[#E11D48]/15 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-80 sm:w-[600px] h-80 sm:h-[600px] bg-[#881337]/25 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           
-          {/* Left Column: Asymmetrical Editorial Narrative */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
+          {/* Left Column: Editorial Headline & Story */}
+          <div className="lg:col-span-7 flex flex-col justify-center text-left">
             
-            {/* Top Status & Rating Pill */}
-            <div ref={badgeRef} className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#141D14] border border-[#2A3A2A] w-fit mb-6">
-              <span className="flex items-center gap-1.5 text-xs uppercase font-medium tracking-widest text-[#D1DCD0]">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block border border-emerald-300" />
-                Veg-Only • {RESTAURANT_CONFIG.brand.rating}
+            {/* Top Status & Price Pill */}
+            <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#221013] border border-[#4A1D24] w-fit mb-5 shadow-sm">
+              <span className="flex items-center gap-1.5 text-[11px] sm:text-xs uppercase font-semibold tracking-wider text-[#E2D1D4]">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block border border-emerald-300" />
+                Pure Veg • {RESTAURANT_CONFIG.brand.rating}
               </span>
-              <span className="text-[#2A3A2A]">|</span>
-              <span className="text-xs text-[#D97706] font-semibold">{RESTAURANT_CONFIG.brand.priceRange}</span>
+              <span className="text-[#4A1D24]">|</span>
+              <span className="text-[11px] sm:text-xs text-[#F59E0B] font-bold">{RESTAURANT_CONFIG.brand.priceRange}</span>
             </div>
 
-            {/* Main Headline */}
+            {/* Fresh Catchy Restaurant Headline */}
             <h1
               ref={headlineRef}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium tracking-tight text-[#F5F8F3] leading-[1.1] mb-6"
+              className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium tracking-tight text-[#FFF5F5] leading-[1.12] mb-5"
             >
-              Every Recipe Brewed With <br />
-              <span className="italic font-light text-[#34D399]">Aroma & Authentic</span> North Indian Soul.
+              Where Pure Taste Meets <br className="hidden sm:block" />
+              <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-[#FB7185] via-[#E11D48] to-[#F59E0B]">
+                Royal Ambiance.
+              </span>
             </h1>
 
-            {/* Supporting Description */}
+            {/* Supporting Copy */}
             <p
               ref={descRef}
-              className="text-base sm:text-lg text-[#D1DCD0]/85 max-w-xl leading-relaxed mb-8"
+              className="text-sm sm:text-base lg:text-lg text-[#E2D1D4]/85 max-w-xl leading-relaxed mb-7"
             >
-              Welcome to <strong>Tezpatta (तेजपत्ता)</strong>, Meerut's premier fine-dining vegetarian destination opposite Apex Tower. Relish rich Paneer Lababdar, slow-simmered Dal Makhani, crispy Dahi Ke Shole, and sizzling Indo-Chinese dishes.
+              Step into Meerut's premier fine-dining sanctuary opposite Apex Tower. Relish rich <strong>Handi Paneer Lababdar</strong>, overnight charcoal-simmered <strong>Dal Makhani</strong>, melt-in-mouth <strong>Dahi Ke Shole</strong>, and sizzling wok delicacies.
             </p>
 
-            {/* Call To Actions */}
-            <div ref={ctaRef} className="flex flex-wrap items-center gap-4 mb-10">
+            {/* Call To Action Buttons */}
+            <div ref={ctaRef} className="flex flex-wrap items-center gap-3.5 mb-8">
               <button
                 onClick={() => scrollTo('menu')}
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#D97706] hover:bg-[#34D399] text-[#0C120C] font-semibold text-sm uppercase tracking-wider rounded-sm transition-all duration-300 shadow-md hover:shadow-[#D97706]/30 cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 bg-gradient-to-r from-[#E11D48] to-[#BE123C] hover:from-[#BE123C] hover:to-[#9F1239] text-white font-semibold text-xs sm:text-sm uppercase tracking-wider rounded-sm transition-all duration-300 shadow-lg shadow-[#E11D48]/30 cursor-pointer active:scale-98"
               >
                 <Utensils className="w-4 h-4" />
-                Explore Pure-Veg Menu
+                Explore Menu
               </button>
 
               <button
                 onClick={() => scrollTo('reservations')}
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-transparent hover:bg-[#141D14] text-[#F5F8F3] border border-[#2A3A2A] hover:border-[#34D399] font-semibold text-sm uppercase tracking-wider rounded-sm transition-all duration-300 cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 bg-[#221013] hover:bg-[#2B161A] text-[#FFF5F5] border border-[#4A1D24] hover:border-[#FB7185] font-semibold text-xs sm:text-sm uppercase tracking-wider rounded-sm transition-all duration-300 cursor-pointer"
               >
-                Book A Table
-                <ArrowRight className="w-4 h-4 text-[#34D399]" />
+                Reserve Table
+                <ArrowRight className="w-4 h-4 text-[#FB7185]" />
               </button>
             </div>
 
-            {/* Live Service Micro-Info */}
-            <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-[#2A3A2A]/60 text-xs text-[#D1DCD0]/70">
+            {/* Mobile-Friendly Micro-Info Footer */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 pt-5 border-t border-[#4A1D24]/70 text-xs text-[#E2D1D4]/80">
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#D97706]" />
-                <span className="text-amber-400 font-semibold">{RESTAURANT_CONFIG.brand.opensSoon}</span>
+                <Clock className="w-4 h-4 text-[#F59E0B] shrink-0" />
+                <span className="text-[#FB7185] font-bold">Opens today at 6:00 PM</span>
+                <span>(Dinner Service)</span>
               </div>
-              <div className="h-3 w-[1px] bg-[#2A3A2A] hidden sm:block" />
+              <div className="hidden sm:block h-3 w-[1px] bg-[#4A1D24]" />
               <div className="flex items-center gap-1.5">
-                <MapPin className="w-4 h-4 text-[#34D399]" />
-                <span>Opp. Apex Tower, Near Vishal Mega Mart & Pantaloons, Garh Rd, Meerut</span>
+                <MapPin className="w-4 h-4 text-[#FB7185] shrink-0" />
+                <span className="truncate">Opp. Apex Tower, Garh Road, Meerut</span>
               </div>
             </div>
+
           </div>
 
-          {/* Right Column: Hero High-Impact Image Card */}
-          <div className="lg:col-span-5 relative" ref={imageContainerRef}>
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+          {/* Right Column: Hero Visual Card (Mobile optimized height & layout) */}
+          <div className="lg:col-span-5 relative mt-4 lg:mt-0" ref={imageContainerRef}>
+            <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
               
-              {/* Outer Decorative Frame */}
-              <div className="relative rounded-2xl overflow-hidden border border-[#2A3A2A] shadow-2xl bg-[#141D14]">
+              {/* Image Frame with Ruby Edge Glow */}
+              <div className="relative rounded-2xl overflow-hidden border border-[#4A1D24] shadow-2xl shadow-black/80 bg-[#221013]">
                 <img
                   src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=1200&q=80"
-                  alt="Handi Paneer Lababdar at Tezpatta Meerut"
-                  className="w-full h-[460px] object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
+                  alt="Handi Paneer Lababdar at Tezpatta"
+                  className="w-full h-72 sm:h-[430px] object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 
-                {/* Gradient Overlay for Mood & Contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C120C] via-transparent to-transparent opacity-85" />
+                {/* Contrast Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#180B0D] via-[#180B0D]/30 to-transparent opacity-90" />
 
-                {/* Floating Highlight Card */}
-                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-[#141D14]/95 backdrop-blur-md border border-[#2A3A2A] flex items-center justify-between">
+                {/* Floating Dish Badge */}
+                <div className="absolute bottom-3.5 left-3.5 right-3.5 p-3.5 sm:p-4 rounded-xl bg-[#221013]/95 backdrop-blur-md border border-[#4A1D24] flex items-center justify-between shadow-lg">
                   <div>
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#34D399]">
-                      Chef's Signature Handi
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#FB7185] flex items-center gap-1">
+                      <Sparkles className="w-3 h-3 text-[#F59E0B]" />
+                      Chef's Special Handi
                     </span>
-                    <h3 className="text-sm font-serif font-bold text-[#F5F8F3]">
+                    <h3 className="text-xs sm:text-sm font-serif font-bold text-[#FFF5F5] mt-0.5">
                       Handi Paneer Lababdar
                     </h3>
                   </div>
                   <div className="text-right">
-                    <span className="text-lg font-serif font-bold text-[#D97706]">
+                    <span className="text-base sm:text-lg font-serif font-bold text-[#F59E0B]">
                       ₹360
                     </span>
                   </div>
                 </div>
               </div>
 
-              {/* Decorative Corner Accent */}
-              <div className="absolute -top-3 -right-3 w-20 h-20 border-t-2 border-r-2 border-[#34D399]/40 pointer-events-none rounded-tr-lg" />
-              <div className="absolute -bottom-3 -left-3 w-20 h-20 border-b-2 border-l-2 border-[#34D399]/40 pointer-events-none rounded-bl-lg" />
+              {/* Decorative Corner Accents */}
+              <div className="absolute -top-2.5 -right-2.5 w-16 h-16 border-t-2 border-r-2 border-[#E11D48]/50 pointer-events-none rounded-tr-xl" />
+              <div className="absolute -bottom-2.5 -left-2.5 w-16 h-16 border-b-2 border-l-2 border-[#E11D48]/50 pointer-events-none rounded-bl-xl" />
             </div>
           </div>
 

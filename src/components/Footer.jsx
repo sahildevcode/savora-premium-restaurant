@@ -14,7 +14,7 @@ export const Footer = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const navOffset = 80;
+      const navOffset = 70;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - navOffset;
       window.scrollTo({
@@ -25,26 +25,26 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0A0C0E] border-t border-[#2C3240] text-[#D8D2C4] pt-16 pb-12">
+    <footer className="bg-[#120708] border-t border-[#4A1D24] text-[#E2D1D4] pt-14 pb-20 sm:pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#2C3240]/60">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 pb-10 border-b border-[#4A1D24]/60">
           
-          {/* Brand Info (4 cols) */}
-          <div className="lg:col-span-4 space-y-4">
+          {/* Brand Info */}
+          <div className="lg:col-span-4 space-y-3 sm:space-y-4">
             <RestaurantLogo />
-            <p className="text-xs sm:text-sm text-[#D8D2C4]/70 leading-relaxed pr-6 mt-4">
-              {RESTAURANT_CONFIG.brand.subtitle}. Honest ingredients, sustainable harvesting, and warm hospitality.
+            <p className="text-xs sm:text-sm text-[#E2D1D4]/75 leading-relaxed pr-4 mt-3">
+              {RESTAURANT_CONFIG.brand.subtitle}
             </p>
 
-            {/* Social Icons (SVGs for clean rendering) */}
-            <div className="flex items-center gap-3 pt-2">
+            {/* Social Icons (SVGs) */}
+            <div className="flex items-center gap-2.5 pt-1">
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-full bg-[#171A21] hover:bg-[#E58A38] text-[#D8D2C4] hover:text-[#0D0F12] border border-[#2C3240] transition-colors"
+                className="p-2.5 rounded-full bg-[#221013] hover:bg-[#E11D48] text-[#E2D1D4] hover:text-white border border-[#4A1D24] transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -55,77 +55,58 @@ export const Footer = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-full bg-[#171A21] hover:bg-[#E58A38] text-[#D8D2C4] hover:text-[#0D0F12] border border-[#2C3240] transition-colors"
+                className="p-2.5 rounded-full bg-[#221013] hover:bg-[#E11D48] text-[#E2D1D4] hover:text-white border border-[#4A1D24] transition-colors"
                 aria-label="Facebook"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.667 5H18V0h-3.808C10.597 0 9 1.583 9 4.615V8z"/>
                 </svg>
               </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-full bg-[#171A21] hover:bg-[#E58A38] text-[#D8D2C4] hover:text-[#0D0F12] border border-[#2C3240] transition-colors"
-                aria-label="Twitter"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
             </div>
           </div>
 
-          {/* Quick Nav Links (3 cols) */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs uppercase font-bold tracking-widest text-[#E58A38]">
-              Navigation
+          {/* Quick Nav Links */}
+          <div className="lg:col-span-3 space-y-2.5">
+            <h4 className="text-xs uppercase font-bold tracking-widest text-[#FB7185]">
+              Quick Links
             </h4>
-            <ul className="space-y-2 text-xs sm:text-sm">
+            <ul className="space-y-1.5 text-xs sm:text-sm">
               <li>
                 <button
                   onClick={() => scrollToSection('hero')}
-                  className="hover:text-[#E58A38] transition-colors cursor-pointer"
+                  className="hover:text-[#FB7185] transition-colors cursor-pointer"
                 >
-                  Home & Experience
+                  Home
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => scrollToSection('signatures')}
-                  className="hover:text-[#E58A38] transition-colors cursor-pointer"
+                  className="hover:text-[#FB7185] transition-colors cursor-pointer"
                 >
-                  Signature Creations
+                  Signature Handis
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => scrollToSection('menu')}
-                  className="hover:text-[#E58A38] transition-colors cursor-pointer"
+                  className="hover:text-[#FB7185] transition-colors cursor-pointer"
                 >
-                  Seasonal Food Menu
+                  Full Pure-Veg Menu
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => scrollToSection('about')}
-                  className="hover:text-[#E58A38] transition-colors cursor-pointer"
+                  className="hover:text-[#FB7185] transition-colors cursor-pointer"
                 >
                   Our Philosophy
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('gallery')}
-                  className="hover:text-[#E58A38] transition-colors cursor-pointer"
-                >
-                  Atmosphere & Gallery
-                </button>
-              </li>
-              <li>
-                <button
                   onClick={() => scrollToSection('reservations')}
-                  className="hover:text-[#E58A38] transition-colors cursor-pointer"
+                  className="hover:text-[#FB7185] transition-colors cursor-pointer"
                 >
                   Book A Table
                 </button>
@@ -133,46 +114,38 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Hours (2 cols) */}
-          <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs uppercase font-bold tracking-widest text-[#E58A38]">
-              Dining Hours
+          {/* Hours */}
+          <div className="lg:col-span-2 space-y-2.5">
+            <h4 className="text-xs uppercase font-bold tracking-widest text-[#FB7185]">
+              Service Hours
             </h4>
-            <ul className="space-y-2 text-xs">
+            <ul className="space-y-1.5 text-xs">
               {RESTAURANT_CONFIG.hours.map((item, idx) => (
                 <li key={idx} className="flex flex-col">
                   <span className="text-white font-medium">{item.days}</span>
-                  <span className="text-[#D8D2C4]/70">{item.time}</span>
+                  <span className="text-[#E2D1D4]/70">{item.time}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Location & Inquiries (3 cols) */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs uppercase font-bold tracking-widest text-[#E58A38]">
-              Find Us
+          {/* Location */}
+          <div className="lg:col-span-3 space-y-2.5">
+            <h4 className="text-xs uppercase font-bold tracking-widest text-[#FB7185]">
+              Visit Us
             </h4>
-            <p className="text-xs text-[#D8D2C4] leading-relaxed">
+            <p className="text-xs text-[#E2D1D4] leading-relaxed">
               {RESTAURANT_CONFIG.contact.address}<br />
               {RESTAURANT_CONFIG.contact.cityStateZip}
             </p>
 
-            <div className="pt-2 text-xs space-y-1">
+            <div className="pt-1.5 text-xs space-y-1">
               <div>
                 <a
                   href={`tel:${RESTAURANT_CONFIG.contact.phoneTel}`}
-                  className="hover:text-[#E58A38] transition-colors font-medium text-white"
+                  className="hover:text-[#FB7185] transition-colors font-bold text-white"
                 >
                   {RESTAURANT_CONFIG.contact.phoneDisplay}
-                </a>
-              </div>
-              <div>
-                <a
-                  href={`mailto:${RESTAURANT_CONFIG.contact.email}`}
-                  className="hover:text-[#E58A38] transition-colors text-[#D8D2C4]/80"
-                >
-                  {RESTAURANT_CONFIG.contact.email}
                 </a>
               </div>
             </div>
@@ -180,15 +153,15 @@ export const Footer = () => {
 
         </div>
 
-        {/* Bottom Bar: Copyright & Back To Top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#D8D2C4]/60">
+        {/* Bottom Bar */}
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#E2D1D4]/60">
           <p>
-            &copy; {new Date().getFullYear()} {RESTAURANT_CONFIG.brand.name}. All rights reserved. Artisanal contemporary dining.
+            &copy; {new Date().getFullYear()} {RESTAURANT_CONFIG.brand.name} Restaurant, Meerut. All rights reserved.
           </p>
 
           <button
             onClick={scrollToTop}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#171A21] hover:bg-[#1C2029] border border-[#2C3240] text-[#D8D2C4] hover:text-[#E58A38] transition-all cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#221013] hover:bg-[#2B161A] border border-[#4A1D24] text-[#E2D1D4] hover:text-[#FB7185] transition-all cursor-pointer"
           >
             <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5" />
