@@ -4,23 +4,22 @@ import { RESTAURANT_CONFIG } from '../restaurantConfig';
 export const RestaurantLogo = ({ showText = true }) => {
   return (
     <div className="flex items-center gap-3 select-none group cursor-pointer">
-      {/* Heritage Indian Motif / Kalash / Diya Emblem */}
-      <div className="relative flex items-center justify-center w-11 h-11 rounded-full bg-linear-to-br from-[#E07A2B] via-[#E8B358] to-[#B44C28] p-[1.5px] shadow-md shadow-[#E07A2B]/20 group-hover:shadow-[#E07A2B]/40 transition-all duration-300">
-        <div className="w-full h-full bg-[#120D0A] rounded-full flex items-center justify-center">
+      {/* Botanical Bay Leaf (Tezpatta) Emblem */}
+      <div className="relative flex items-center justify-center w-11 h-11 rounded-full bg-linear-to-br from-[#4E7B44] via-[#D97706] to-[#141D14] p-[1.5px] shadow-md shadow-[#4E7B44]/25 group-hover:shadow-[#34D399]/40 transition-all duration-300">
+        <div className="w-full h-full bg-[#0C120C] rounded-full flex items-center justify-center">
           <svg
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            className="w-5 h-5 text-[#E8B358] group-hover:scale-110 transition-transform duration-300"
+            className="w-5 h-5 text-[#34D399] group-hover:scale-110 transition-transform duration-300"
             strokeWidth="1.75"
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            {/* Indian Heritage Diya / Lotus / Temple arch emblem */}
-            <path d="M12 2c.5 2 2 3.5 2 5.5A4 4 0 0 1 10 11a4 4 0 0 1-4-3.5C6 5.5 7.5 4 8 2c.5 1.5 2 1.5 4 0z" fill="#E07A2B" stroke="#E8B358" />
-            <path d="M4 14a8 8 0 0 0 16 0" />
-            <path d="M2 18h20" />
-            <path d="M6 18v2a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-2" />
+            {/* Elegant Bay Leaf (Tezpatta) with central vein & herb curve */}
+            <path d="M12 2C6.5 2 3 7.5 3 13c0 4.5 3.5 8 8 8s9-3.5 9-8c0-5.5-3.5-11-8-11z" fill="#4E7B44" fillOpacity="0.25" stroke="#34D399" />
+            <path d="M12 2c0 6 3 11 8 11" stroke="#D97706" />
+            <path d="M12 9c-2 2-3 4.5-3 7" stroke="#34D399" />
           </svg>
         </div>
       </div>
@@ -28,17 +27,17 @@ export const RestaurantLogo = ({ showText = true }) => {
       {showText && (
         <div className="flex flex-col">
           <div className="flex items-baseline gap-1.5">
-            <span className="font-serif tracking-[0.18em] text-lg font-bold text-[#FBF7EE] leading-none group-hover:text-[#E8B358] transition-colors">
+            <span className="font-serif tracking-[0.16em] text-lg font-bold text-[#F5F8F3] leading-none group-hover:text-[#34D399] transition-colors">
               {RESTAURANT_CONFIG.brand.name}
             </span>
-            <span className="text-xs text-[#E8B358] font-medium">
+            <span className="text-xs text-[#D97706] font-medium">
               ({RESTAURANT_CONFIG.brand.hindiName})
             </span>
           </div>
           <div className="flex items-center gap-1.5 mt-1">
             <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block border border-emerald-300" title="Veg Only" />
-            <span className="text-[9px] uppercase tracking-[0.25em] text-[#DFD5C2]/70 font-sans">
-              Pure Veg • Heritage Dining
+            <span className="text-[9px] uppercase tracking-[0.25em] text-[#D1DCD0]/70 font-sans">
+              Veg-Only • Garh Road, Meerut
             </span>
           </div>
         </div>

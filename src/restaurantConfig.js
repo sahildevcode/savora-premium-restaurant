@@ -1,384 +1,411 @@
-// Centralized Restaurant Brand & Business Configuration for MAATRIBHOOMI (मातृभूमि)
+// Centralized Restaurant Brand & Business Configuration for TEZPATTA (तेजपत्ता)
 
 export const RESTAURANT_CONFIG = {
   // Brand Identity
   brand: {
-    name: "MAATRIBHOOMI",
-    hindiName: "मातृभूमि",
-    tagline: "Celebrating India's Living Heritage & Flavors",
-    subtitle: "Pan-Indian Heritage Vegetarian Dining Curated with Rare Regional Recipes & Royal Hospitality",
-    cuisine: "Authentic Regional Indian • Pure Veg",
-    established: "2024",
+    name: "TEZPATTA",
+    hindiName: "तेजपत्ता",
+    tagline: "Flavors Steeped In Indian Heritage & Aromas",
+    subtitle: "Fine Dining Vegetarian Haven • Authentic North Indian, Tandoori & Indo-Chinese Gastronomy",
+    cuisine: "North Indian • Indo-Chinese • Tandoori",
+    established: "2018",
     currency: "₹",
     currencyCode: "INR",
-    priceRange: "₹400 – ₹1,600",
-    rating: "4.3 ★ (534+ reviews)",
+    priceRange: "₹200 – ₹1,000",
+    rating: "4.3 ★ (204+ reviews)",
     pureVegBadge: "100% Pure Vegetarian",
+    opensSoon: "Opens Soon • 6:00 PM",
   },
 
-  // Color Palette Reference: Rich Indian Terracotta, Royal Amber Gold & Heritage Charcoal
+  // Color Palette: Bay Leaf Herbal Olive & Forest Green, Warm Cinnamon Amber & Charcoal
   theme: {
-    darkBg: "#120D0A",
-    surfaceBg: "#1C1410",
-    cardBg: "#241B16",
-    accentAmber: "#E07A2B",
-    accentGold: "#E8B358",
-    creamLight: "#FBF7EE",
-    creamMuted: "#DFD5C2",
-    borderSubtle: "#3D2B20",
-    terracotta: "#B44C28",
+    darkBg: "#0C120C",
+    surfaceBg: "#141D14",
+    cardBg: "#1C271C",
+    accentAmber: "#D97706",
+    accentGreen: "#34D399",
+    bayLeaf: "#4E7B44",
+    creamLight: "#F5F8F3",
+    creamMuted: "#D1DCD0",
+    borderSubtle: "#2A3A2A",
   },
 
   // Contact & Location Details from Google Maps profile
   contact: {
-    phone: "+91 98711 23456",
-    phoneDisplay: "+91 98711 23456",
-    phoneTel: "+919871123456",
-    email: "namaste@maatribhoomi.com",
-    address: "Unit B, Near Botanical Garden Metro Station, Sector 38",
-    cityStateZip: "Noida, Uttar Pradesh 201301",
-    mapLink: "https://maps.app.goo.gl/oxFsG6QXLUqhAwmB6",
-    whatsapp: "+919871123456",
+    phone: "+91 94122 05500",
+    phoneDisplay: "+91 94122 05500",
+    phoneTel: "+919412205500",
+    email: "contact@tezpattameerut.com",
+    address: "Opposite Apex Tower, Near Vishal Mega Mart & Pantaloons, Garh Road, Mangal Pandey Nagar",
+    cityStateZip: "Meerut, Uttar Pradesh 250004",
+    mapLink: "https://maps.google.com/?q=Tezpatta+Restaurant+Garh+Road+Meerut",
+    whatsapp: "+919412205500",
   },
 
   // Operating Hours from Google Maps
   hours: [
-    { days: "Monday – Friday", time: "12:00 PM – 11:30 PM" },
-    { days: "Saturday – Sunday", time: "11:30 AM – 11:30 PM" },
-    { days: "Status", time: "Open Now • Closes 11:30 PM" },
+    { days: "Daily Evening Service", time: "6:00 PM – 11:30 PM" },
+    { days: "Weekend Lunch & Dinner", time: "1:00 PM – 11:30 PM" },
+    { days: "Live Status", time: "Opens soon • 6:00 PM" },
   ],
 
   // Social Links
   socialLinks: [
     { label: "Instagram", url: "https://instagram.com" },
     { label: "Facebook", url: "https://facebook.com" },
-    { label: "Google Maps", url: "https://maps.app.goo.gl/oxFsG6QXLUqhAwmB6" },
+    { label: "Google Maps", url: "https://maps.google.com/?q=Tezpatta+Restaurant+Garh+Road+Meerut" },
   ],
 
-  // Menu Categories (Regional Indian Heritage)
+  // Menu Categories
   categories: [
     "All",
-    "Royal Thalis & Feasts",
-    "Regional Starters & Chaat",
-    "Heritage Curries & Dal",
-    "Tandoor & Clay Oven Breads",
-    "Mithai & Traditional Desserts",
-    "Desi Shikanji & Coolers",
+    "Signature Kebabs & Tikkas",
+    "North Indian Main Course",
+    "Indo-Chinese Delights",
+    "Tandoori Breads & Kulchas",
+    "Basmati Biryani & Raitas",
+    "Desserts & Artisanal Shakes",
   ],
 
   // Signature Highlights (Featured prominently)
   signatureDishes: [
     {
       id: "sig-1",
-      name: "Maharaja Heritage Royal Thali",
-      category: "Royal Thalis & Feasts",
-      price: 850,
+      name: "Handi Paneer Lababdar",
+      category: "North Indian Main Course",
+      price: 360,
       isSpecial: true,
-      dietary: "Royal Feast • Pure Veg",
-      shortDescription: "A grand culinary journey across Bharat: 14 handcrafted regional bowls including Paneer Makhana, Dal Baati Churma, Ker Sangri, Pulao & Hot Jalebi.",
-      fullDescription: "Served on traditional kansa bronze ware, bringing together the culinary gems of Rajasthan, Awadh, Gujarat, and Punjab prepared in pure desi ghee.",
-      image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=1200&q=80",
-      ingredients: ["Paneer Lababdar", "Dal Baati", "Churma", "Ker Sangri", "Kashmiri Pulao", "Amritsari Kulcha", "Kesari Kheer"],
-      calories: "980 kcal",
-      prepTime: "20 mins"
+      dietary: "Chef Signature • Pure Veg",
+      shortDescription: "Tender malai paneer cubes simmered in a velvety bay leaf (tezpatta) spiced cashew-tomato reduction with grated mawa and fresh cream.",
+      fullDescription: "Our crown jewel gravy cooked over gentle embers, perfumed with royal cumin and whole aromatic bay leaves for an unforgettable aroma and rich texture.",
+      image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=1200&q=80",
+      ingredients: ["Fresh Malai Paneer", "Whole Tezpatta (Bay Leaf)", "Cashew Paste", "San Marzano Desi Tomatoes", "Kasuri Methi"],
+      calories: "490 kcal",
+      prepTime: "18 mins"
     },
     {
       id: "sig-2",
-      name: "Slow-Simmered Dal Maatribhoomi",
-      category: "Heritage Curries & Dal",
-      price: 420,
+      name: "Signature Dal Makhani Tezpatta",
+      category: "North Indian Main Course",
+      price: 320,
       isSpecial: true,
-      dietary: "Chef Signature • 24hr Simmer",
-      shortDescription: "Signature black lentils slow-cooked for 24 hours on gentle charcoal embers with fresh churned white makhan, vine tomatoes and organic spices.",
-      fullDescription: "Silky, smoky, and deeply comforting. Cooked using heritage brass handis without any preservatives, finished with pure cow ghee tadka.",
+      dietary: "Overnight Embers • Pure Veg",
+      shortDescription: "Black lentils slow-cooked overnight with white butter, fresh vine tomatoes and aromatic bay leaf infusion.",
+      fullDescription: "Cooked for over 18 hours in heritage brass pots, smoked with charcoal dhungar and whipped with hand-churned dairy butter.",
       image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80",
-      ingredients: ["Whole Urad Dal", "Charcoal Dhungar Smoke", "Hand-Churned White Makhan", "Kashmiri Degi Mirch", "Kasuri Methi"],
-      calories: "460 kcal",
+      ingredients: ["Urad Dal", "Kashmiri Degi Mirch", "Fresh White Butter", "Tezpatta Leaves", "Aromatic Spices"],
+      calories: "420 kcal",
       prepTime: "15 mins"
     },
     {
       id: "sig-3",
-      name: "Zaffrani Paneer Tikka Angaar",
-      category: "Regional Starters & Chaat",
-      price: 480,
+      name: "Crispy Dahi Ke Shole & Suran Kebab",
+      category: "Signature Kebabs & Tikkas",
+      price: 290,
       isSpecial: true,
-      dietary: "Clay Oven Tandoor",
-      shortDescription: "Malai paneer cubes marinated in Persian saffron, roasted bell pepper coulis, hung curd & crushed coriander seeds.",
-      fullDescription: "Char-grilled over fragrant clay tandoor embers, served with mint coriander relish and laccha pickled shallots.",
-      image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=1200&q=80",
-      ingredients: ["Farm Fresh Paneer", "Kashmiri Zaffran", "Stone Ground Mustard Oil", "Hung A2 Curd", "Anardana"],
-      calories: "410 kcal",
-      prepTime: "16 mins"
+      dietary: "Kebab Special • Pure Veg",
+      shortDescription: "Golden crisp bread rolls loaded with spiced hung curd, bell peppers, fresh herbs, and pomegranate kernels.",
+      fullDescription: "Served with mint-coriander emulsion and spicy garlic dip. A signature starter perfected by Tezpatta chefs.",
+      image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=1200&q=80",
+      ingredients: ["Thick Hung Curd", "Crisp Sourdough Crust", "Anardana Seeds", "Roasted Cumin", "Micro Cilantro"],
+      calories: "340 kcal",
+      prepTime: "14 mins"
     },
     {
       id: "sig-4",
-      name: "Kullhad Rabdi with Crisp Desi Jalebi",
-      category: "Mithai & Traditional Desserts",
-      price: 290,
+      name: "Honey Chilli Crispy Lotus Stem & Potato",
+      category: "Indo-Chinese Delights",
+      price: 280,
       isSpecial: true,
-      dietary: "Heritage Sweet",
-      shortDescription: "Spiral golden jalebis fried in pure desi ghee, dipped in saffron-cardamom chasni and topped with slow-reduced thick malai rabdi in earthen clay pots.",
-      fullDescription: "Freshly made before your eyes, pairing the piping hot, crisp crunch of artisanal jalebis with freezing chilled, pistachio-loaded slow-cooked rabdi.",
-      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80",
-      ingredients: ["Pure Desi Ghee", "Slow-Reduced Buffalo Milk Rabdi", "Irani Saffron", "Pistachio Silver Leaves"],
-      calories: "520 kcal",
-      prepTime: "10 mins"
+      dietary: "Indo-Chinese Crunch",
+      shortDescription: "Wok-tossed lotus stem slices and crisp potato fingers glazed in organic wild honey, toasted sesame and fiery red chilies.",
+      fullDescription: "Blistered at high flame with spring onions and ginger-soy glaze for the ultimate crunch and caramelized bite.",
+      image: "https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=1200&q=80",
+      ingredients: ["Crisp Lotus Stem", "Wildflower Honey", "Toasted White Sesame", "Bird Eye Chillies", "Spring Onion"],
+      calories: "320 kcal",
+      prepTime: "12 mins"
     }
   ],
 
-  // Complete Pan-Indian Pure-Veg Menu Catalog
+  // Complete Menu Catalog
   menu: [
-    // Royal Thalis & Feasts
+    // Signature Kebabs & Tikkas
     {
-      id: "thali-1",
-      name: "Maharaja Heritage Royal Thali",
-      category: "Royal Thalis & Feasts",
-      price: 850,
-      dietary: "Pure Veg • Unlimited Refills",
-      shortDescription: "A grand pan-Indian royal spread: Paneer Lababdar, Dal Baati Churma, Pulao, Bread basket, Raita & Hot Jalebi.",
-      fullDescription: "Crafted on authentic bronze kansa plates to promote Ayurvedic wellness, representing the culinary capitals of India in one grand feast.",
-      image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Shahi Paneer", "Dal Makhani", "Dal Baati", "Churma", "Kashmiri Pulao", "Butter Naan", "Rabdi"],
-      calories: "980 kcal",
-      prepTime: "20 mins"
+      id: "keb-1",
+      name: "Crispy Dahi Ke Shole",
+      category: "Signature Kebabs & Tikkas",
+      price: 290,
+      dietary: "Tezpatta Special",
+      shortDescription: "Golden crisp rolled bread parcels filled with spiced spiced hung curd, bell peppers, and fresh coriander.",
+      fullDescription: "Fried golden in pure groundnut oil, providing a crunch exterior with a luscious chilled velvety center.",
+      image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Hung Curd", "Crisp Bread Shell", "Capsicum & Onion", "Roasted Jeera"],
+      calories: "340 kcal",
+      prepTime: "12 mins"
     },
     {
-      id: "thali-2",
-      name: "Awadhi Dawat Thali",
-      category: "Royal Thalis & Feasts",
-      price: 690,
-      dietary: "Pure Veg • Nawabi Specialty",
-      shortDescription: "Lucknowi Subz Biryani, Paneer Korma, Smoked Baingan Bharta, Taftan Bread & Shahi Tukda.",
-      fullDescription: "Subtle aromas of kewra, saffron, and slow-dum cooking from the royal kitchens of Lucknow.",
-      image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Dum Basmati Biryani", "Awadhi Paneer", "Taftan", "Burani Raita", "Shahi Tukda"],
-      calories: "820 kcal",
-      prepTime: "18 mins"
-    },
-
-    // Regional Starters & Chaat
-    {
-      id: "str-1",
-      name: "Banarasi Palak Patta Chaat",
-      category: "Regional Starters & Chaat",
-      price: 260,
-      dietary: "Street Heritage",
-      shortDescription: "Crispy fried baby spinach leaves coated in spiced gram flour, sweetened churned curd, saunth chutney & sev.",
-      fullDescription: "An explosion of sweet, tangy, and crunchy notes perfected along the ghats of Varanasi.",
-      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Crisp Spinach Leaves", "Spiced Dahi", "Date-Tamarind Chutney", "Mint Chutney", "Pomegranate Seeds"],
-      calories: "280 kcal",
-      prepTime: "10 mins"
-    },
-    {
-      id: "str-2",
-      name: "Zaffrani Paneer Tikka Angaar",
-      category: "Regional Starters & Chaat",
-      price: 480,
+      id: "keb-2",
+      name: "Zaffrani Paneer Tikka Tezpatta",
+      category: "Signature Kebabs & Tikkas",
+      price: 350,
       dietary: "Clay Oven Tandoor",
-      shortDescription: "Malai paneer cubes marinated in Persian saffron, roasted bell peppers, hung curd & crushed spices.",
-      fullDescription: "Char-grilled to golden tenderness in our clay tandoor, served with laccha onions and tangy chutney.",
+      shortDescription: "Malai paneer cubes marinated in bay leaf, hung yogurt, saffron, and tandoori spices.",
+      fullDescription: "Charred over fragrant charcoal in our clay kiln, served on a sizzling platter with mint dip.",
       image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Fresh Paneer", "Saffron", "Hung Curd", "Degi Mirch", "Mint Relish"],
-      calories: "410 kcal",
+      ingredients: ["Fresh Paneer", "Tezpatta Bay Leaves", "Hung Dahi", "Mustard Oil", "Kashmiri Mirch"],
+      calories: "390 kcal",
       prepTime: "16 mins"
     },
     {
-      id: "str-3",
-      name: "Dahi Ke Kebab & Beetroot Tikki",
-      category: "Regional Starters & Chaat",
-      price: 360,
-      dietary: "Melt-In-Mouth",
-      shortDescription: "Silky spiced yogurt patties with a crisp golden exterior, stuffed with roasted nuts and fresh coriander.",
-      fullDescription: "Delicate textured vegetarian kebabs pan-fried on cast iron tawa with pure cow ghee.",
-      image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Hung Curd", "Roasted Cumin", "Cardamom", "Cashews", "Beetroot Crust"],
-      calories: "320 kcal",
-      prepTime: "14 mins"
+      id: "keb-3",
+      name: "Kathal Ke Galouti Kebab",
+      category: "Signature Kebabs & Tikkas",
+      price: 310,
+      dietary: "Awadhi Heritage",
+      shortDescription: "Melt-in-mouth raw jackfruit kebabs prepared in traditional shammi style with royal Awadhi potli masala.",
+      fullDescription: "Pan-seared on a heavy cast iron tawa with desi ghee, served with mini Mughlai parathas.",
+      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Tender Raw Jackfruit", "Potli Spices", "Roasted Gram Flour", "Desi Ghee"],
+      calories: "310 kcal",
+      prepTime: "15 mins"
     },
 
-    // Heritage Curries & Dal
+    // North Indian Main Course
     {
-      id: "cur-1",
-      name: "Slow-Simmered Dal Maatribhoomi",
-      category: "Heritage Curries & Dal",
-      price: 420,
-      dietary: "24-Hour Charcoal Simmer",
-      shortDescription: "Whole black urad lentils simmered overnight with fresh churned white makhan and vine tomatoes.",
-      fullDescription: "Our proudest recipe — rich, smoky, and velvety without overpowering heavy creams.",
+      id: "main-1",
+      name: "Handi Paneer Lababdar",
+      category: "North Indian Main Course",
+      price: 360,
+      dietary: "Chef Specialty",
+      shortDescription: "Malai paneer in a velvety tomato-cashew gravy with grated mawa and bay leaf aroma.",
+      fullDescription: "Rich, mildly sweet, and deeply flavorful with a smooth texture and touch of dried fenugreek.",
+      image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Malai Paneer", "Mawa", "Cashew Gravy", "Bay Leaf", "Butter"],
+      calories: "490 kcal",
+      prepTime: "18 mins"
+    },
+    {
+      id: "main-2",
+      name: "Signature Dal Makhani Tezpatta",
+      category: "North Indian Main Course",
+      price: 320,
+      dietary: "18-Hour Slow Cook",
+      shortDescription: "Black lentils slow-cooked overnight on charcoal embers with fresh white butter and vine tomatoes.",
+      fullDescription: "Silky, creamy, and smoky with balanced spices that celebrate North Indian comfort food.",
       image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Urad Dal", "Churned Makhan", "Tomato Reduction", "Kasuri Methi"],
-      calories: "460 kcal",
+      ingredients: ["Urad Dal", "White Butter", "Tomatoes", "Tezpatta Leaves"],
+      calories: "420 kcal",
       prepTime: "15 mins"
     },
     {
-      id: "cur-2",
-      name: "Paneer Makhanwala Rogan",
-      category: "Heritage Curries & Dal",
-      price: 460,
-      dietary: "Classic Pure Veg",
-      shortDescription: "Tender cottage cheese simmered in a silky tomato gravy with crushed cashews and aromatic mace.",
-      fullDescription: "An ode to classic North Indian banquet recipes made without onion-garlic options also available upon request.",
-      image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["A2 Milk Paneer", "San Marzano Style Desi Tomatoes", "Makhana Cream", "Green Cardamom"],
-      calories: "510 kcal",
+      id: "main-3",
+      name: "Kadhai Paneer Angaara",
+      category: "North Indian Main Course",
+      price: 340,
+      dietary: "Spicy & Robust",
+      shortDescription: "Cottage cheese chunks tossed with fresh bell peppers, onions and freshly pounded coriander & red chilies.",
+      fullDescription: "Cooked in traditional iron wok (kadhai) at high heat to retain crispness and smoky aroma.",
+      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Paneer", "Crunchy Bell Peppers", "Pounded Kadhai Masala", "Ginger Juliennes"],
+      calories: "440 kcal",
       prepTime: "16 mins"
     },
     {
-      id: "cur-3",
-      name: "Kashmiri Dum Aloo Badami",
-      category: "Heritage Curries & Dal",
-      price: 390,
-      dietary: "Kashmiri Heritage",
-      shortDescription: "Pricked baby potatoes deep fried and simmered in a fennel and dry ginger infused curd gravy.",
-      fullDescription: "Traditional wazwan-style vegetarian curry carrying the authentic fiery red hue of dried Kashmiri chillies.",
-      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Baby Potatoes", "Saunf (Fennel)", "Sonth (Dry Ginger)", "Almond Paste", "Asafoetida"],
-      calories: "420 kcal",
+      id: "main-4",
+      name: "Shahi Navratan Korma",
+      category: "North Indian Main Course",
+      price: 350,
+      dietary: "Royal Mughlai",
+      shortDescription: "Nine assorted garden vegetables and fresh fruits simmered in a royal almond-coconut white gravy.",
+      fullDescription: "Rich and festive preparation garnished with roasted cashews, raisins, and pomegranate pearls.",
+      image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Seasonal Vegetables", "Dry Fruits", "Almond Paste", "Saffron Essence"],
+      calories: "430 kcal",
       prepTime: "18 mins"
     },
 
-    // Tandoor & Clay Oven Breads
+    // Indo-Chinese Delights
+    {
+      id: "chn-1",
+      name: "Chilli Paneer Dry / Gravy",
+      category: "Indo-Chinese Delights",
+      price: 290,
+      dietary: "Indo-Chinese Classic",
+      shortDescription: "Crispy fried cottage cheese tossed in dark soy sauce, spicy garlic paste, green chilies and spring onions.",
+      fullDescription: "A legendary street-style favorite with bold garlicky flavors and tender paneer inside.",
+      image: "https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Crispy Paneer", "Dark Soy", "Green Chillies", "Garlic", "Bell Peppers"],
+      calories: "380 kcal",
+      prepTime: "12 mins"
+    },
+    {
+      id: "chn-2",
+      name: "Honey Chilli Crispy Potato",
+      category: "Indo-Chinese Delights",
+      price: 240,
+      dietary: "Crispy Crunch",
+      shortDescription: "Fried potato batons glazed with wildflower honey, sesame seeds and spicy red chili reduction.",
+      fullDescription: "Irresistibly sweet, sticky, and spicy snack loved by diners of all ages.",
+      image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Crisp Potatoes", "Pure Honey", "Sesame Seeds", "Red Chilli Flakes"],
+      calories: "360 kcal",
+      prepTime: "10 mins"
+    },
+    {
+      id: "chn-3",
+      name: "Veg Manchurian in Hot Garlic Gravy",
+      category: "Indo-Chinese Delights",
+      price: 270,
+      dietary: "Wok Specialty",
+      shortDescription: "Minced vegetable dumplings simmered in rich coriander-garlic dark gravy.",
+      fullDescription: "Perfect pairing with Hakka Noodles or Fried Rice, filled with fresh cabbage, carrots and beans.",
+      image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Veg Dumplings", "Minced Garlic", "Ginger", "Celery", "Soy Gravy"],
+      calories: "330 kcal",
+      prepTime: "14 mins"
+    },
+
+    // Tandoori Breads & Kulchas
     {
       id: "brd-1",
-      name: "Amritsari Chur-Chur Naan Thali",
-      category: "Tandoor & Clay Oven Breads",
-      price: 320,
-      dietary: "Clay Oven Special",
-      shortDescription: "Crispy, multi-layered stuffed bread crushed with desi ghee, served with Pindi Chhole & Boondi Raita.",
-      fullDescription: "Stuffed with seasoned paneer, spiced potatoes, and anardana seeds, baked until blistered in the tandoor.",
+      name: "Amritsari Chur-Chur Naan with Chhole",
+      category: "Tandoori Breads & Kulchas",
+      price: 260,
+      dietary: "Tandoori Feast",
+      shortDescription: "Crushed flaky tandoori naan stuffed with spiced paneer and potatoes, served with Pindi Chhole & Raita.",
+      fullDescription: "Drizzled with hot desi ghee and crushed by hand right before serving for maximum flakiness.",
       image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Spiced Paneer", "Amritsari Chhole", "Desi Ghee", "Pickled Onions"],
-      calories: "620 kcal",
+      ingredients: ["Multi-layer Naan", "Spiced Paneer", "Amritsari Chhole", "Cow Ghee"],
+      calories: "580 kcal",
       prepTime: "12 mins"
     },
     {
       id: "brd-2",
-      name: "Garlic Butter Laccha Paratha & Missi Roti",
-      category: "Tandoor & Clay Oven Breads",
-      price: 110,
-      dietary: "Tandoori Fresh",
-      shortDescription: "Flaky layered whole wheat paratha sprinkled with toasted garlic, kalonji seeds and freshly chopped coriander.",
-      fullDescription: "Freshly slapped against the clay walls of our wood-fired tandoor, brushed with warm clarified butter.",
+      name: "Garlic Butter Naan & Missi Roti",
+      category: "Tandoori Breads & Kulchas",
+      price: 90,
+      dietary: "Clay Oven Fresh",
+      shortDescription: "Refined flour naan topped with roasted garlic and coriander, finished with melted butter.",
+      fullDescription: "Slapped on clay tandoor walls and baked to bubbly perfection.",
       image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Stone Ground Atta", "Roasted Garlic", "Nigella Seeds", "Cow Ghee"],
-      calories: "280 kcal",
-      prepTime: "8 mins"
+      ingredients: ["Wheat Flour", "Minced Garlic", "Coriander", "Fresh Butter"],
+      calories: "210 kcal",
+      prepTime: "6 mins"
     },
 
-    // Mithai & Traditional Desserts
+    // Basmati Biryani & Raitas
     {
-      id: "des-1",
-      name: "Kullhad Rabdi with Crisp Desi Jalebi",
-      category: "Mithai & Traditional Desserts",
-      price: 290,
-      dietary: "Sweet Specialty",
-      shortDescription: "Spiral golden jalebis fried in pure desi ghee, served with thick pistachio malai rabdi in earthen clay pot.",
-      fullDescription: "Crispy hot jalebis paired with slow-condensed milk rabdi — an eternal favorite at Indian festive gatherings.",
-      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Pure Desi Ghee", "Saffron Syrup", "Buffalo Milk Rabdi", "Pistachio Slivers"],
-      calories: "520 kcal",
-      prepTime: "10 mins"
+      id: "bir-1",
+      name: "Tezpatta Dum Subz Biryani",
+      category: "Basmati Biryani & Raitas",
+      price: 310,
+      dietary: "Dum Cooked Basmati",
+      shortDescription: "Fragrant aged basmati rice cooked on dum with seasonal garden vegetables, whole bay leaves, saffron and brown onions.",
+      fullDescription: "Sealed with dough in a clay handi and slow-cooked for 45 minutes to lock in every aromatic layer.",
+      image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Aged Basmati", "Tezpatta Leaves", "Saffron Milk", "Caramelized Onions", "Fresh Mint"],
+      calories: "460 kcal",
+      prepTime: "20 mins"
     },
     {
-      id: "des-2",
-      name: "Kesari Rasmalai with Roasted Almonds",
-      category: "Mithai & Traditional Desserts",
-      price: 240,
-      dietary: "Signature Sweet",
-      shortDescription: "Soft cottage cheese dumplings soaked in chilled saffron and green cardamom scented milk cream.",
-      fullDescription: "Silky, delicate dessert garnished with slivered pistachios and real silver varq.",
-      image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Fresh Chenna", "Kashmiri Kesar", "Cardamom Milk", "Crushed Almonds"],
-      calories: "340 kcal",
+      id: "bir-2",
+      name: "Pomegranate (Anar) & Boondi Raita",
+      category: "Basmati Biryani & Raitas",
+      price: 150,
+      dietary: "Chilled Cooler",
+      shortDescription: "Whisked fresh curd folded with crispy chickpea boondi, roasted cumin, and sweet ruby pomegranate seeds.",
+      fullDescription: "The ultimate refreshing accompaniment to spicy gravies and tandoori breads.",
+      image: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["A2 Fresh Curd", "Anar Seeds", "Bhuna Jeera", "Black Salt", "Crispy Boondi"],
+      calories: "140 kcal",
       prepTime: "5 mins"
     },
 
-    // Desi Shikanji & Coolers
+    // Desserts & Artisanal Shakes
     {
-      id: "drk-1",
-      name: "Kulhad Masala Chaas & Jaljeera",
-      category: "Desi Shikanji & Coolers",
-      price: 140,
-      dietary: "Digestive Cooler",
-      shortDescription: "Churned buttermilk tempered with roasted cumin seeds, fresh coriander, ginger, black salt and mint.",
-      fullDescription: "Served ice cold in rustic earthen kulhads that infuse a natural earthy scent into every sip.",
-      image: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Fresh Dahi Churn", "Bhuna Jeera", "Kala Namak", "Fresh Pudina"],
-      calories: "85 kcal",
-      prepTime: "4 mins"
+      id: "des-1",
+      name: "Hot Gulab Jamun with Kesari Kulfi",
+      category: "Desserts & Artisanal Shakes",
+      price: 190,
+      dietary: "Sweet Classic",
+      shortDescription: "Warm khoya dumplings soaked in rose-cardamom syrup paired with dense pistachio saffron matka kulfi.",
+      fullDescription: "A contrast of hot melt-in-mouth jamun and chilled creamy kulfi.",
+      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Pure Mawa / Khoya", "Cardamom Syrup", "Pistachio Kulfi", "Silver Leaves"],
+      calories: "410 kcal",
+      prepTime: "6 mins"
     },
     {
-      id: "drk-2",
-      name: "Banarasi Thandai with Rose Petals",
-      category: "Desi Shikanji & Coolers",
-      price: 220,
-      dietary: "Royal Beverage",
-      shortDescription: "Traditional chilled full-cream milk blended with almonds, melon seeds, fennel, black pepper, and saffron.",
-      fullDescription: "The timeless festive refresher of Kashi, topped with dried damask rose petals and crushed pistachios.",
-      image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80",
-      ingredients: ["Chilled Milk", "Almond & Melon Paste", "Saunf & Kali Mirch", "Kesar & Rose Essence"],
-      calories: "260 kcal",
-      prepTime: "6 mins"
+      id: "des-2",
+      name: "Royal Alphonso Mango Shake",
+      category: "Desserts & Artisanal Shakes",
+      price: 180,
+      dietary: "Bestseller Drink",
+      shortDescription: "Thick chilled shake made with Alphonso mango pulp, condensed milk and topped with vanilla ice cream scoop.",
+      fullDescription: "Tezpatta customer favorite beverage served in tall frosted glasses.",
+      image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
+      ingredients: ["Alphonso Mango Pulp", "Full Cream Milk", "Vanilla Bean Gelato", "Slivered Almonds"],
+      calories: "320 kcal",
+      prepTime: "5 mins"
     }
   ],
 
-  // Gallery Photos (Real restaurant ambiance & culinary heritage)
+  // Gallery Photos
   gallery: [
     {
       id: "gal-1",
-      title: "Heritage Red Sandstone Facade",
-      type: "Restaurant Architecture",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
-      caption: "Arched heritage windows and warm amber illumination welcoming diners at Sector 38, Noida."
+      title: "Handi Paneer Lababdar & Rich Gravies",
+      type: "Plated Specialties",
+      image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=1200&q=80",
+      caption: "Rich bay leaf scented curries prepared in pure desi ghee and fresh cream."
     },
     {
       id: "gal-2",
-      title: "Royal Maharaja Thali Spread",
-      type: "Plated Heritage Food",
-      image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=1200&q=80",
-      caption: "Fourteen regional vegetarian specialties served in handcrafted bronze kansa ware."
+      title: "Fine Dining Family Hall Ambiance",
+      type: "Restaurant Interior",
+      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+      caption: "Warm illumination, plush seating and sophisticated decor opposite Apex Tower, Meerut."
     },
     {
       id: "gal-3",
-      title: "Artisanal Jalebi & Rabdi Station",
-      type: "Mithai Craftsmanship",
-      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80",
-      caption: "Golden spirals fried in pure desi ghee and bathed in rich saffron rabdi."
+      title: "Signature Dal Makhani Simmering",
+      type: "Overnight Embers",
+      image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80",
+      caption: "Slow-cooked black lentils with generous scoops of white churned butter."
     },
     {
       id: "gal-4",
-      title: "Hand-Painted Folk Pillars & Interior Ambiance",
-      type: "Dining Atmosphere",
-      image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1200&q=80",
-      caption: "Earthy terracotta textures, traditional Indian motifs, and comfortable family seating."
+      title: "Charcoal Clay Tandoor Crafts",
+      type: "Live Kitchen",
+      image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=1200&q=80",
+      caption: "Smoky paneer tikkas, stuffed kulchas and crisp garlic naans."
     },
     {
       id: "gal-5",
-      title: "Smoky Clay Oven Tandoor Crafts",
-      type: "Chef Preparation",
-      image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=1200&q=80",
-      caption: "Charcoal roasted paneer tikkas and blistered breads infused with clay kiln aromas."
+      title: "Wok-Tossed Indo-Chinese Dishes",
+      type: "Chef Special",
+      image: "https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=1200&q=80",
+      caption: "Fiery chilli paneer, honey chilli potatoes and Manchurian delicacies."
     },
     {
       id: "gal-6",
-      title: "Festive Banarasi Thandai & Coolers",
-      type: "Desi Beverages",
-      image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80",
-      caption: "Saffron and dry-fruit coolers served in earthen kulhads."
+      title: "Celebration Dining & Banquet Spaces",
+      type: "Atmosphere",
+      image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1200&q=80",
+      caption: "Perfect destination on Garh Road for family gatherings, birthdays and anniversaries."
     }
   ],
 
   // Brand Story / About Details
   about: {
-    headline: "A Love Letter To The Culinary Soul Of Bharat",
-    paragraph1: "Maatribhoomi (मातृभूमि) is born from a deep reverence for India's diverse gastronomic traditions. From the royal banquets of Rajasthan and Awadh to the temple kitchens of South India and vibrant street food lanes of Banaras, our kitchen celebrates authentic, unadulterated vegetarian food made with pure cow ghee and traditional recipes.",
-    paragraph2: "Every detail — from our red sandstone arches and hand-painted folk art pillars to our slow-simmered 24-hour Dal and bronze dining thalis — has been curated to give families and food lovers an unforgettable celebration of Indian culture and warmth.",
+    headline: "The Aromatic Art of Vegetarian Fine Dining in Meerut",
+    paragraph1: "Named after the quintessential Indian bay leaf (तेजपत्ता) that imparts depth, soul, and unforgettable aroma to royal cuisine, Tezpatta is a celebrated vegetarian dining destination situated in the heart of Mangal Pandey Nagar on Garh Road, Meerut.",
+    paragraph2: "We specialize in opulent North Indian gravies, authentic clay oven tikkas, comforting Dal Makhani, and sizzling Indo-Chinese favorites. Whether joining us for an intimate family dinner or a festive celebration, our focus is uncompromising taste, warm hospitality, and fresh ingredients.",
     stats: [
       { label: "Pure Veg Dishes", value: "100%" },
       { label: "Google Rating", value: "4.3 ★" },
-      { label: "Verified Reviews", value: "534+" },
-      { label: "Price For Two", value: "₹800" }
+      { label: "Verified Reviews", value: "204+" },
+      { label: "Price For Two", value: "₹500" }
     ]
   }
 };
